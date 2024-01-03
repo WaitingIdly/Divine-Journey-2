@@ -1,0 +1,307 @@
+{
+  "version": 2,
+  "location": "divinejourney2:auto_infusion_matrix",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 10.0,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "modularmachinery:blockcontroller",
+          "meta": 2
+        },
+        "type": "blockstate"
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "auto_infusion_matrix",
+  "basePattern": {
+    "structureDir": [
+      "BACK",
+      "UP",
+      "RIGHT"
+    ],
+    "pattern": [
+      [
+        "ABCBA",
+        " ABA ",
+        "ADDDA",
+        "BDDDB",
+        "ADDDA",
+        " ABA ",
+        "ABBBA"
+      ],
+      [
+        "BEAEB",
+        "AFGFA",
+        "DHIHD",
+        "D J D",
+        "DDDDD",
+        "ABBBA",
+        "BEAEB"
+      ],
+      [
+        "BAAAK",
+        "@GAGB",
+        "DILID",
+        "DJ JD",
+        "DDMDD",
+        "BBBBB",
+        "BA AB"
+      ],
+      [
+        "BEAEB",
+        "AFGFA",
+        "DHIHD",
+        "D J D",
+        "DDDDD",
+        "ABBBA",
+        "BEAEB"
+      ],
+      [
+        "ABNBA",
+        " ABA ",
+        "ADDDA",
+        "BDDDB",
+        "ADDDA",
+        " ABA ",
+        "ABBBA"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "minecraft:stained_glass",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "divinejourney2:auto_infusion_matrix",
+        "type": "component"
+      },
+      "B": {
+        "states": [
+          {
+            "id": "modularmachinery:blockcasing",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "C": {
+        "states": [
+          {
+            "id": "modularmachinery:blockoutputbus",
+            "meta": 1
+          }
+        ],
+        "type": "states"
+      },
+      "D": {
+        "states": [
+          {
+            "id": "thaumicaugmentation:fortified_glass",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "E": {
+        "states": [
+          {
+            "id": "thaumicaugmentation:stone",
+            "meta": 11
+          }
+        ],
+        "type": "states"
+      },
+      "F": {
+        "states": [
+          {
+            "id": "thaumcraft:metal_alchemical_advanced",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "G": {
+        "blocks": [
+          {
+            "id": "contenttweaker:liquid_death",
+            "meta": 0
+          },
+          {
+            "id": "thaumcraft:liquid_death"
+          }
+        ],
+        "type": "blocks"
+      },
+      "H": {
+        "states": [
+          {
+            "id": "thaumcraft:pillar_arcane",
+            "meta": 2
+          }
+        ],
+        "type": "states"
+      },
+      "I": {
+        "states": [
+          {
+            "id": "thaumicenergistics:infusion_provider",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "J": {
+        "states": [
+          {
+            "id": "thaumcraft:stabilizer",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "air": {
+        "type": "air"
+      },
+      "K": {
+        "states": [
+          {
+            "id": "modularmachinery:blockenergyinputhatch",
+            "meta": 4
+          }
+        ],
+        "type": "states"
+      },
+      "L": {
+        "states": [
+          {
+            "id": "thaumcraft:pedestal_arcane",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "any": {
+        "type": "any"
+      },
+      "M": {
+        "states": [
+          {
+            "id": "thaumcraft:infusion_matrix",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "N": {
+        "states": [
+          {
+            "id": "modularmachinery:blockinputbus",
+            "meta": 1
+          }
+        ],
+        "type": "states"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C"
+      ],
+      "D": [
+        "D"
+      ],
+      "E": [
+        "E"
+      ],
+      "F": [
+        "F"
+      ],
+      "G": [
+        "G"
+      ],
+      "H": [
+        "H"
+      ],
+      "I": [
+        "I"
+      ],
+      "J": [
+        "J"
+      ],
+      "K": [
+        "K"
+      ],
+      "L": [
+        "L"
+      ],
+      "M": [
+        "M"
+      ],
+      "-": [
+        "air"
+      ],
+      "N": [
+        "N"
+      ]
+    }
+  }
+}

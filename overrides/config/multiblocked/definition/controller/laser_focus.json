@@ -1,0 +1,317 @@
+{
+  "version": 2,
+  "location": "divinejourney2:laser_focus",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 10.0,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "modularmachinery:blockcontroller",
+          "meta": 2
+        },
+        "type": "blockstate"
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "laser_focus",
+  "catalyst": "{id:\"minecraft:air\",Count:2,Damage:0s}",
+  "consumeCatalyst": "NOT_CONSUMED",
+  "noNeedController": false,
+  "basePattern": {
+    "structureDir": [
+      "BACK",
+      "UP",
+      "RIGHT"
+    ],
+    "pattern": [
+      [
+        " AABAA CCC",
+        " DDDDD E E",
+        "       E F",
+        "       E  ",
+        "       F  ",
+        "          ",
+        "          ",
+        "          ",
+        "          "
+      ],
+      [
+        "AAGGGAAAAA",
+        "A     DAHA",
+        "D      AHA",
+        "       AAD",
+        "      DAD ",
+        "   ADDAD  ",
+        "   DAAD   ",
+        "    DD    ",
+        "          "
+      ],
+      [
+        "AAGGGAAAAA",
+        "@  I  DCJK",
+        "D      CJA",
+        "   L   CJA",
+        "   M  A AD",
+        "  AJAAJAD ",
+        "  DAJJAD  ",
+        "   DAAD   ",
+        "    DD    "
+      ],
+      [
+        "AAGGGAAAAA",
+        "A     DAHA",
+        "D      AHA",
+        "       AAD",
+        "      DAD ",
+        "   ADDAD  ",
+        "   DAAD   ",
+        "    DD    ",
+        "          "
+      ],
+      [
+        " AANAA CCC",
+        " DDDDD E E",
+        "       E F",
+        "       E  ",
+        "       F  ",
+        "          ",
+        "          ",
+        "          ",
+        "          "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "modularmachinery:blockcasing",
+            "meta": 4
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "divinejourney2:laser_focus",
+        "type": "component"
+      },
+      "B": {
+        "states": [
+          {
+            "id": "modularmachinery:blockoutputbus",
+            "meta": 5
+          }
+        ],
+        "type": "states"
+      },
+      "C": {
+        "states": [
+          {
+            "id": "immersiveengineering:sheetmetal",
+            "meta": 2
+          }
+        ],
+        "type": "states"
+      },
+      "D": {
+        "states": [
+          {
+            "id": "immersiveengineering:sheetmetal_slab",
+            "meta": 2
+          }
+        ],
+        "type": "states"
+      },
+      "E": {
+        "states": [
+          {
+            "id": "immersiveengineering:metal_decoration1",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "F": {
+        "states": [
+          {
+            "id": "thaumicaugmentation:bars",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "G": {
+        "states": [
+          {
+            "id": "modularmachinery:blockcasing",
+            "meta": 2
+          }
+        ],
+        "type": "states"
+      },
+      "H": {
+        "states": [
+          {
+            "id": "contenttweaker:reinforced_glass_casing",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "I": {
+        "states": [
+          {
+            "id": "contenttweaker:hyperglued_meteoric_casing",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "J": {
+        "states": [
+          {
+            "id": "contenttweaker:portion_of_the_sun",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "air": {
+        "type": "air"
+      },
+      "K": {
+        "states": [
+          {
+            "id": "modularmachinery:blockenergyinputhatch",
+            "meta": 6
+          }
+        ],
+        "type": "states"
+      },
+      "L": {
+        "states": [
+          {
+            "id": "mekanism:machineblock2",
+            "meta": 13
+          }
+        ],
+        "type": "states"
+      },
+      "any": {
+        "type": "any"
+      },
+      "M": {
+        "states": [
+          {
+            "id": "minecraft:stained_glass",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "N": {
+        "states": [
+          {
+            "id": "modularmachinery:blockinputbus",
+            "meta": 5
+          }
+        ],
+        "type": "states"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C"
+      ],
+      "D": [
+        "D"
+      ],
+      "E": [
+        "E"
+      ],
+      "F": [
+        "F"
+      ],
+      "G": [
+        "G"
+      ],
+      "H": [
+        "H"
+      ],
+      "I": [
+        "I"
+      ],
+      "J": [
+        "J"
+      ],
+      "K": [
+        "K"
+      ],
+      "L": [
+        "L"
+      ],
+      "M": [
+        "M"
+      ],
+      "-": [
+        "air"
+      ],
+      "N": [
+        "N"
+      ]
+    }
+  }
+}
