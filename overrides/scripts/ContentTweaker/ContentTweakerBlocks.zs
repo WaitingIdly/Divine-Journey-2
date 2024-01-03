@@ -11,6 +11,17 @@ import crafttweaker.item.WeightedItemStack;
 
 print("STARTING ContentTweakerBlocks.zs");
 
+var starlight = VanillaFactory.createBlock("starlight", <blockmaterial:rock>);
+starlight.setLightValue(1);
+starlight.register();
+
+var liquid_death = VanillaFactory.createBlock("liquid_death", <blockmaterial:rock>);
+liquid_death.setTranslucent(true);
+liquid_death.register();
+
+var molten_mystic = VanillaFactory.createBlock("molten_mystic", <blockmaterial:rock>);
+molten_mystic.register();
+
 var compressed_obsidian1 = VanillaFactory.createBlock("compressed_obsidian1", <blockmaterial:rock>);
 compressed_obsidian1.setBlockHardness(75.0);
 compressed_obsidian1.setBlockResistance(1500.0);
