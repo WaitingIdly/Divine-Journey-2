@@ -1,0 +1,170 @@
+{
+  "version": 2,
+  "location": "dj2:assembler_helper",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 10.0,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "immersiveengineering:conveyor",
+          "meta": 0
+        },
+        "type": "blockstate"
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "empty",
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "AAA",
+        "B@B",
+        "CBC"
+      ],
+      [
+        "DED",
+        "BEB",
+        "CBC"
+      ],
+      [
+        "AAA",
+        "BFB",
+        "CBC"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "immersiveengineering:metal_decoration1",
+            "meta": 1
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "dj2:assembler_helper",
+        "type": "component"
+      },
+      "B": {
+        "states": [
+          {
+            "id": "immersiveengineering:sheetmetal",
+            "meta": 9
+          }
+        ],
+        "type": "states"
+      },
+      "C": {
+        "states": [
+          {
+            "id": "immersiveengineering:sheetmetal_slab",
+            "meta": 9
+          }
+        ],
+        "type": "states"
+      },
+      "D": {
+        "states": [
+          {
+            "id": "immersiveengineering:metal_decoration0",
+            "meta": 3
+          }
+        ],
+        "type": "states"
+      },
+      "E": {
+        "states": [
+          {
+            "id": "immersiveengineering:metal_decoration0",
+            "meta": 4
+          }
+        ],
+        "type": "states"
+      },
+      "F": {
+        "states": [
+          {
+            "id": "immersiveengineering:conveyor",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C"
+      ],
+      "D": [
+        "D"
+      ],
+      "E": [
+        "E"
+      ],
+      "F": [
+        "F"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  }
+}

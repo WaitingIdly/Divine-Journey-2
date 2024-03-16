@@ -1,0 +1,158 @@
+{
+  "version": 2,
+  "location": "dj2:chaos_stabilizer_helper",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 10.0,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "draconicadditions:chaos_stabilizer_core",
+          "meta": 0
+        },
+        "type": "blockstate"
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "empty",
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "   A   ",
+        "   A   ",
+        "   A   "
+      ],
+      [
+        " AAAAA ",
+        "       ",
+        "   B   "
+      ],
+      [
+        " AAAAA ",
+        "       ",
+        "       "
+      ],
+      [
+        "AAAAAAA",
+        "A     A",
+        "AB @ BA"
+      ],
+      [
+        " AAAAA ",
+        "       ",
+        "       "
+      ],
+      [
+        " AAAAA ",
+        "       ",
+        "   B   "
+      ],
+      [
+        "   A   ",
+        "   A   ",
+        "   A   "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "draconicevolution:infused_obsidian",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "dj2:chaos_stabilizer_helper",
+        "type": "component"
+      },
+      "B": {
+        "states": [
+          {
+            "id": "draconicevolution:draconic_block",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "version": 2,
+  "location": "dj2:boiler_small_helper",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 10.0,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "mekanism:basicblock2",
+          "meta": 8
+        },
+        "type": "blockstate"
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "empty",
+  "basePattern": {
+    "structureDir": [
+      "FRONT",
+      "UP",
+      "LEFT"
+    ],
+    "pattern": [
+      [
+        "AAA",
+        "ABA",
+        "ABA",
+        "AAA"
+      ],
+      [
+        "AAA",
+        "BC@",
+        "BDE",
+        "AAA"
+      ],
+      [
+        "AAA",
+        "ABA",
+        "ABA",
+        "AAA"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "mekanism:basicblock2",
+            "meta": 7
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "dj2:boiler_small_helper",
+        "type": "component"
+      },
+      "B": {
+        "states": [
+          {
+            "id": "mekanism:basicblock",
+            "meta": 10
+          }
+        ],
+        "type": "states"
+      },
+      "C": {
+        "states": [
+          {
+            "id": "mekanism:basicblock2",
+            "meta": 5
+          }
+        ],
+        "type": "states"
+      },
+      "D": {
+        "states": [
+          {
+            "id": "mekanism:basicblock2",
+            "meta": 6
+          }
+        ],
+        "type": "states"
+      },
+      "E": {
+        "states": [
+          {
+            "id": "mekanism:basicblock2",
+            "meta": 8
+          }
+        ],
+        "type": "states"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C"
+      ],
+      "D": [
+        "D"
+      ],
+      "E": [
+        "E"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  }
+}

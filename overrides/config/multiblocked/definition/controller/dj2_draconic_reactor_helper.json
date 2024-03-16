@@ -1,0 +1,203 @@
+{
+  "version": 2,
+  "location": "dj2:draconic_reactor_helper",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 10.0,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "draconicevolution:reactor_component",
+          "meta": 1
+        },
+        "type": "blockstate"
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "empty",
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "    A    "
+      ],
+      [
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         "
+      ],
+      [
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         "
+      ],
+      [
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         "
+      ],
+      [
+        "    @    ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "A   B   A"
+      ],
+      [
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         "
+      ],
+      [
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         "
+      ],
+      [
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         "
+      ],
+      [
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "    A    "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "draconicevolution:reactor_component",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "dj2:draconic_reactor_helper",
+        "type": "component"
+      },
+      "B": {
+        "states": [
+          {
+            "id": "draconicevolution:reactor_core",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  }
+}

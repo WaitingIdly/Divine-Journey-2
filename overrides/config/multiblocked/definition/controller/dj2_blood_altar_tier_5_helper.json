@@ -1,0 +1,391 @@
+{
+  "version": 2,
+  "location": "dj2:blood_altar_tier_5_helper",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 10.0,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "bloodmagic:altar",
+          "meta": 0
+        },
+        "type": "blockstate"
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "empty",
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "  AAAAAAAAAAAAA  ",
+        "B               B",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "A               A",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "A               A",
+        "     AAAAAAA     ",
+        "   C         C   ",
+        "   C         C   ",
+        "   C         C   ",
+        "   C         C   ",
+        "   D         D   "
+      ],
+      [
+        "A               A",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "A               A",
+        "   A         A   ",
+        "      AAAAA      ",
+        "     C     C     ",
+        "     C     C     ",
+        "     E     E     ",
+        "                 "
+      ],
+      [
+        "A               A",
+        "   A         A   ",
+        "     A     A     ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "A               A",
+        "   A         A   ",
+        "     A     A     ",
+        "       AAA       ",
+        "                 ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "A               A",
+        "   A         A   ",
+        "     A     A     ",
+        "       A A       ",
+        "        @        ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "A               A",
+        "   A         A   ",
+        "     A     A     ",
+        "       AAA       ",
+        "                 ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "A               A",
+        "   A         A   ",
+        "     A     A     ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "A               A",
+        "   A         A   ",
+        "      AAAAA      ",
+        "     C     C     ",
+        "     C     C     ",
+        "     E     E     ",
+        "                 "
+      ],
+      [
+        "A               A",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "A               A",
+        "     AAAAAAA     ",
+        "   C         C   ",
+        "   C         C   ",
+        "   C         C   ",
+        "   C         C   ",
+        "   D         D   "
+      ],
+      [
+        "A               A",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 "
+      ],
+      [
+        "  AAAAAAAAAAAAA  ",
+        "B               B",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "bloodmagic:blood_rune",
+            "meta": 0
+          },
+          {
+            "id": "bloodmagic:blood_rune",
+            "meta": 1
+          },
+          {
+            "id": "bloodmagic:blood_rune",
+            "meta": 2
+          },
+          {
+            "id": "bloodmagic:blood_rune",
+            "meta": 3
+          },
+          {
+            "id": "bloodmagic:blood_rune",
+            "meta": 4
+          },
+          {
+            "id": "bloodmagic:blood_rune",
+            "meta": 5
+          },
+          {
+            "id": "bloodmagic:blood_rune",
+            "meta": 6
+          },
+          {
+            "id": "bloodmagic:blood_rune",
+            "meta": 7
+          },
+          {
+            "id": "bloodmagic:blood_rune",
+            "meta": 8
+          },
+          {
+            "id": "bloodmagic:blood_rune",
+            "meta": 9
+          },
+          {
+            "id": "bloodmagic:blood_rune",
+            "meta": 10
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "dj2:blood_altar_tier_5_helper",
+        "type": "component"
+      },
+      "B": {
+        "states": [
+          {
+            "id": "minecraft:beacon",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "D": {
+        "states": [
+          {
+            "id": "bloodmagic:decorative_brick",
+            "meta": 0
+          },
+          {
+            "id": "bloodmagic:decorative_brick",
+            "meta": 1
+          }
+        ],
+        "type": "states"
+      },
+      "E": {
+        "states": [
+          {
+            "id": "minecraft:glowstone",
+            "meta": 0
+          },
+          {
+            "id": "minecraft:sea_lantern",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "any"
+      ],
+      "D": [
+        "D"
+      ],
+      "E": [
+        "E"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  }
+}

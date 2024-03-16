@@ -1,0 +1,228 @@
+{
+  "version": 2,
+  "location": "dj2:energy_core_5_helper",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 10.0,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "draconicevolution:energy_storage_core",
+          "meta": 0
+        },
+        "type": "blockstate"
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "empty",
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "         ",
+        "         ",
+        "   AAA   ",
+        "   AAA   ",
+        "   AAA   ",
+        "         ",
+        "         "
+      ],
+      [
+        "         ",
+        "         ",
+        "   BBB   ",
+        "   BBB   ",
+        "   BBB   ",
+        "         ",
+        "         "
+      ],
+      [
+        "         ",
+        "   BBB   ",
+        "  BCCCB  ",
+        "  BCCCB  ",
+        "  BCCCB  ",
+        "   BBB   ",
+        "         "
+      ],
+      [
+        "   BBB   ",
+        "  BCCCB  ",
+        "ABCCCCCBA",
+        "ABCCCCCBA",
+        "ABCCCCCBA",
+        "  BCCCB  ",
+        "   BBB   "
+      ],
+      [
+        "   BBB   ",
+        "  BCCCB  ",
+        "ABCCCCCBA",
+        "ABCC@CCBA",
+        "ABCCCCCBA",
+        "  BCCCB  ",
+        "   BBB   "
+      ],
+      [
+        "   BBB   ",
+        "  BCCCB  ",
+        "ABCCCCCBA",
+        "ABCCCCCBA",
+        "ABCCCCCBA",
+        "  BCCCB  ",
+        "   BBB   "
+      ],
+      [
+        "         ",
+        "   BBB   ",
+        "  BCCCB  ",
+        "  BCCCB  ",
+        "  BCCCB  ",
+        "   BBB   ",
+        "         "
+      ],
+      [
+        "         ",
+        "         ",
+        "   BBB   ",
+        "   BBB   ",
+        "   BBB   ",
+        "         ",
+        "         "
+      ],
+      [
+        "         ",
+        "         ",
+        "   AAA   ",
+        "   AAA   ",
+        "   AAA   ",
+        "         ",
+        "         "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "draconicevolution:particle_generator",
+            "meta": 2
+          },
+          {
+            "id": "draconicevolution:particle_generator",
+            "meta": 3
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "dj2:energy_core_5_helper",
+        "type": "component"
+      },
+      "B": {
+        "states": [
+          {
+            "id": "draconicevolution:draconium_block",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "C": {
+        "states": [
+          {
+            "id": "minecraft:redstone_block",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  }
+}

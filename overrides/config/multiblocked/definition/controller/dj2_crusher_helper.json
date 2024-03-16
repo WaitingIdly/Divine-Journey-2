@@ -1,0 +1,176 @@
+{
+  "version": 2,
+  "location": "dj2:crusher_helper",
+  "traits": {},
+  "properties": {
+    "rotationState": "ALL",
+    "showInJei": true,
+    "isOpaque": true,
+    "hasCollision": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 10.0,
+    "harvestLevel": 1,
+    "stackSize": 64,
+    "tabGroup": "multiblocked"
+  },
+  "status": {
+    "unformed": {
+      "renderer": {
+        "state": {
+          "id": "immersiveengineering:metal_decoration1",
+          "meta": 0
+        },
+        "type": "blockstate"
+      }
+    },
+    "idle": {
+      "parent": "unformed"
+    },
+    "working": {
+      "parent": "idle"
+    },
+    "suspend": {
+      "parent": "working"
+    }
+  },
+  "recipeMap": "empty",
+  "basePattern": {
+    "structureDir": [
+      "FRONT",
+      "UP",
+      "LEFT"
+    ],
+    "pattern": [
+      [
+        "AAA",
+        "BC ",
+        "   "
+      ],
+      [
+        "AAA",
+        "DDD",
+        "EEE"
+      ],
+      [
+        "CCA",
+        "DC@",
+        "EEE"
+      ],
+      [
+        "AAA",
+        "DDD",
+        "EEE"
+      ],
+      [
+        "CCC",
+        "CCC",
+        "   "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "immersiveengineering:metal_decoration1",
+            "meta": 1
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "dj2:crusher_helper",
+        "type": "component"
+      },
+      "B": {
+        "states": [
+          {
+            "id": "immersiveengineering:metal_decoration0",
+            "meta": 3
+          }
+        ],
+        "type": "states"
+      },
+      "C": {
+        "states": [
+          {
+            "id": "immersiveengineering:metal_decoration0",
+            "meta": 4
+          }
+        ],
+        "type": "states"
+      },
+      "D": {
+        "states": [
+          {
+            "id": "immersiveengineering:metal_decoration1",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "E": {
+        "states": [
+          {
+            "id": "minecraft:hopper",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C"
+      ],
+      "D": [
+        "D"
+      ],
+      "E": [
+        "E"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  }
+}
