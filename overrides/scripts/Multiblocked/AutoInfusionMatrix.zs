@@ -14,12 +14,12 @@ import crafttweaker.text.ITextComponent;
 
 print("STARTING AutoInfusionMatrix.zs");
 
-val auto_infusion_matrix = RecipeMap("auto_infusion_matrix") as RecipeMap;
-RecipeMap.register(auto_infusion_matrix);
+val map = RecipeMap("auto_infusion_matrix") as RecipeMap;
+RecipeMap.register(map);
 
 <contenttweaker:liquid_death>.addTooltip("Used to represent Liquid Death in a Multiblock'd Multiblock preview.");
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_aluminum_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -32,7 +32,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:aluminum_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_RedstoneInlay")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -45,7 +45,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:inlay> * 4)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicenergistics_arcane_assembler")
     .duration(16)
     .perTick(true).inputFE(5000).perTick(false)
@@ -65,7 +65,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicenergistics:arcane_assembler>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_rift_mover_output")
     .duration(140)
     .perTick(true).inputFE(6000).perTick(false)
@@ -84,7 +84,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:rift_mover_output>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_spinning_wheel")
     .duration(160)
     .perTick(true).inputFE(4000).perTick(false)
@@ -101,7 +101,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:spinning_wheel>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_focus_3")
     .duration(120)
     .perTick(true).inputFE(6000).perTick(false)
@@ -119,7 +119,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:focus_3>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_permutatio")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -129,7 +129,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_permutatio>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_goblet")
     .duration(80)
     .perTick(true).inputFE(3500).perTick(false)
@@ -142,7 +142,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:goblet>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_primal_crusher")
     .duration(80)
     .perTick(true).inputFE(5000).perTick(false)
@@ -161,7 +161,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:primal_crusher>.withTag({"infench":[{"lvl":"1s","id":"1s"},{"lvl":"1s","id":"4s"}]}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_ElementalSword")
     .duration(56)
     .perTick(true).inputFE(2000).perTick(false)
@@ -177,7 +177,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:elemental_sword>.withTag({"infench":[{"lvl":"2s","id":"5s"}]}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_crystal_terra")
     .duration(5)
     .perTick(true).inputFE(1000).perTick(false)
@@ -190,7 +190,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:crystal_terra>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_token_of_remedies")
     .duration(80)
     .perTick(true).inputFE(3500).perTick(false)
@@ -204,7 +204,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:token_of_remedies>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_stellae")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -214,7 +214,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_stellae>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicenergistics_infusion_provider")
     .duration(140)
     .perTick(true).inputFE(6000).perTick(false)
@@ -232,7 +232,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicenergistics:infusion_provider>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thermaldynamics_cryo_stabilized_fluxduct_empty")
     .duration(54)
     .perTick(true).inputFE(3500).perTick(false)
@@ -248,7 +248,7 @@ auto_infusion_matrix.start()
     .outputItems(<thermaldynamics:duct_0:9>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_aversio")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -258,7 +258,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_aversio>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_vinculum")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -268,7 +268,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_vinculum>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_thaumostatic_harness")
     .duration(160)
     .perTick(true).inputFE(5000).perTick(false)
@@ -284,7 +284,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:thaumostatic_harness>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_slime_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -297,7 +297,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:slime_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_pentacle")
     .duration(80)
     .perTick(true).inputFE(3500).perTick(false)
@@ -310,7 +310,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:pentacle>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_4")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -323,7 +323,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade:4>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_VoidRobeChest")
     .duration(52)
     .perTick(true).inputFE(5000).perTick(false)
@@ -341,7 +341,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:void_robe_chest>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_steel_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -354,7 +354,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:steel_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_rift_feeder")
     .duration(120)
     .perTick(true).inputFE(5000).perTick(false)
@@ -371,7 +371,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:rift_feeder>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_soularium_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -384,7 +384,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:soularium_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_crystal_ignis")
     .duration(5)
     .perTick(true).inputFE(1000).perTick(false)
@@ -397,7 +397,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:crystal_ignis>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_2")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -411,7 +411,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade:2>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_crystal_vitium")
     .duration(5)
     .perTick(true).inputFE(1000).perTick(false)
@@ -424,7 +424,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:crystal_vitium>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_lumium_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -437,7 +437,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:lumium_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_spider_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -450,7 +450,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:spider_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_witches_oven")
     .duration(142)
     .perTick(true).inputFE(4000).perTick(false)
@@ -468,7 +468,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:witches_oven>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_machina")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -478,7 +478,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_machina>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_spiritus")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -488,7 +488,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_spiritus>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_redstone_alloy_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -501,7 +501,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:redstone_alloy_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_VoidRobeHelm")
     .duration(51)
     .perTick(true).inputFE(5000).perTick(false)
@@ -519,7 +519,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:void_robe_helm>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_ignis")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -529,7 +529,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_ignis>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicenergistics_arcane_inscriber")
     .duration(16)
     .perTick(true).inputFE(4000).perTick(false)
@@ -546,7 +546,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicenergistics:arcane_inscriber>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_primal_cutter")
     .duration(80)
     .perTick(true).inputFE(5000).perTick(false)
@@ -565,7 +565,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:primal_cutter>.withTag({"infench":[{"lvl":"2s","id":"5s"},{"lvl":"1s","id":"2s"}]}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_terra")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -575,7 +575,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_terra>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_verdant_charm_lifegiver")
     .duration(32)
     .perTick(true).inputFE(3500).perTick(false)
@@ -589,7 +589,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:verdant_charm>.withTag({"type":"1b"}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_gold_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -602,7 +602,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:gold_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("lightningcraft_demonstone")
     .duration(16)
     .perTick(true).inputFE(4000).perTick(false)
@@ -616,7 +616,7 @@ auto_infusion_matrix.start()
     .outputItems(<lightningcraft:stone_block:3>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_energy_pylon")
     .duration(76)
     .perTick(true).inputFE(6000).perTick(false)
@@ -629,7 +629,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:energy_pylon>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_elytra_harness_augment")
     .duration(150)
     .perTick(true).inputFE(7000).perTick(false)
@@ -647,7 +647,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:elytra_harness_augment>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_redstone_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -660,7 +660,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:redstone_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_fortress_helm_sipping_fiend")
     .duration(36)
     .perTick(true).inputFE(5000).perTick(false)
@@ -676,7 +676,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:fortress_helm>.withTag({"mask":"0"}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_BootsTraveller")
     .duration(52)
     .perTick(true).inputFE(3500).perTick(false)
@@ -691,7 +691,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:traveller_boots>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_metallum")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -701,7 +701,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_metallum>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_crystal_ordo")
     .duration(5)
     .perTick(true).inputFE(1000).perTick(false)
@@ -714,7 +714,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:crystal_ordo>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_guardian_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -727,7 +727,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:guardian_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_8")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -740,7 +740,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade:8>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_SealBreak")
     .duration(16)
     .perTick(true).inputFE(1500).perTick(false)
@@ -754,7 +754,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:seal:12>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_sigil_table")
     .duration(110)
     .perTick(true).inputFE(5000).perTick(false)
@@ -771,7 +771,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:sigil_table>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_potentia")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -781,7 +781,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_potentia>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_auram")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -791,7 +791,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_auram>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_sensus")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -801,7 +801,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_sensus>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_LampGrowth")
     .duration(24)
     .perTick(true).inputFE(2000).perTick(false)
@@ -817,7 +817,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:lamp_growth>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_essence_of_destruction")
     .duration(114)
     .perTick(true).inputFE(8000).perTick(false)
@@ -834,7 +834,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:essence_of_destruction>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_nickel_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -847,7 +847,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:nickel_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_quicksilver_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -860,7 +860,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:quicksilver_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_jade_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -873,7 +873,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:jade_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_embittered_brick_witches_altar")
     .duration(33)
     .perTick(true).inputFE(3500).perTick(false)
@@ -890,7 +890,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:embittered_brick_witches_altar>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_aluminum_brass_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -903,7 +903,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:aluminum_brass_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_constantan_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -916,7 +916,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:constantan_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_10")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -929,7 +929,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade:10>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_bestia")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -939,7 +939,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_bestia>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_MirrorHand")
     .duration(28)
     .perTick(true).inputFE(2000).perTick(false)
@@ -953,7 +953,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:hand_mirror>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_praemunio")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -963,7 +963,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_praemunio>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_fracture_locator")
     .duration(110)
     .perTick(true).inputFE(6000).perTick(false)
@@ -977,7 +977,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:fracture_locator>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("lightningcraft_underworld_charge")
     .duration(250)
     .perTick(true).inputFE(6000).perTick(false)
@@ -993,7 +993,7 @@ auto_infusion_matrix.start()
     .outputItems(<lightningcraft:material:6>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_Stabilizer")
     .duration(58)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1009,7 +1009,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:stabilizer>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_vacuos")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -1019,7 +1019,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_vacuos>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_dye_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1032,7 +1032,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:dye_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_glowstone_ingot_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1045,7 +1045,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:glowstone_ingot_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_platinum_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1058,7 +1058,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:platinum_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_sol")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -1068,7 +1068,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_sol>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_gauntlet_2")
     .duration(100)
     .perTick(true).inputFE(5000).perTick(false)
@@ -1087,7 +1087,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:gauntlet:1>.withTag({"cap":{"slots":"3"},"color":"2498903"}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_MindBiothaumic")
     .duration(28)
     .perTick(true).inputFE(2500).perTick(false)
@@ -1102,7 +1102,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:mind:1>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_1")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1114,7 +1114,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade:1>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_SealButcher")
     .duration(16)
     .perTick(true).inputFE(1500).perTick(false)
@@ -1128,7 +1128,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:seal:8>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_0")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1141,7 +1141,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_tier3_crafting_seed")
     .duration(30)
     .perTick(true).inputFE(2500).perTick(false)
@@ -1152,7 +1152,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:crafting:19>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_experience_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1165,7 +1165,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:experience_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_charm_undying")
     .duration(54)
     .perTick(true).inputFE(1500).perTick(false)
@@ -1175,7 +1175,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:charm_undying>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_silver_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1188,7 +1188,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:silver_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_ElementalAxe")
     .duration(56)
     .perTick(true).inputFE(2000).perTick(false)
@@ -1204,7 +1204,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:elemental_axe>.withTag({"infench":[{"lvl":"1s","id":"2s"},{"lvl":"1s","id":"0s"}]}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_crystal_aqua")
     .duration(5)
     .perTick(true).inputFE(1000).perTick(false)
@@ -1217,7 +1217,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:crystal_aqua>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_SealHarvest")
     .duration(16)
     .perTick(true).inputFE(1500).perTick(false)
@@ -1230,7 +1230,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:seal:7>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("matc_intermediumcrystal")
     .duration(78)
     .perTick(true).inputFE(1000).perTick(false)
@@ -1246,7 +1246,7 @@ auto_infusion_matrix.start()
     .outputItems(<matc:intermediumcrystal>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_impetus_diffuser")
     .duration(130)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1263,7 +1263,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:impetus_diffuser>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_tin_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1276,7 +1276,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:tin_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_amber_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1289,7 +1289,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:amber_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_impetus_drainer")
     .duration(130)
     .perTick(true).inputFE(5000).perTick(false)
@@ -1306,7 +1306,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:impetus_drainer>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_fortress_helm_goggles_of_revealing")
     .duration(16)
     .perTick(true).inputFE(3500).perTick(false)
@@ -1319,7 +1319,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:fortress_helm>.withTag({"goggles":"1b"}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_9")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1332,7 +1332,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade:9>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_void_boots")
     .duration(51)
     .perTick(true).inputFE(5000).perTick(false)
@@ -1350,7 +1350,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:void_boots>.withTag({"color":"6961280"}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_zombie_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1363,7 +1363,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:zombie_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_fortress_helm_angry_ghost")
     .duration(36)
     .perTick(true).inputFE(5000).perTick(false)
@@ -1379,7 +1379,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:fortress_helm>.withTag({"mask":"1"}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_crystal_aer")
     .duration(5)
     .perTick(true).inputFE(1000).perTick(false)
@@ -1392,7 +1392,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:crystal_aer>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_arcane_terraformer")
     .duration(220)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1411,7 +1411,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:arcane_terraformer>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_infernium_seed")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1422,7 +1422,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:tier3_inferium_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_JarBrain")
     .duration(28)
     .perTick(true).inputFE(3500).perTick(false)
@@ -1437,7 +1437,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:jar_brain>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_focus_2")
     .duration(44)
     .perTick(true).inputFE(1500).perTick(false)
@@ -1454,7 +1454,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:focus_2>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_exanimis")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -1464,7 +1464,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_exanimis>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_stone_witches_altar")
     .duration(33)
     .perTick(true).inputFE(3500).perTick(false)
@@ -1481,7 +1481,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:stone_witches_altar>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_tier3_mob_chunk")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1493,7 +1493,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:chunk:2>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_nether_brick_witches_altar")
     .duration(33)
     .perTick(true).inputFE(3500).perTick(false)
@@ -1510,7 +1510,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:nether_brick_witches_altar>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_nether_quartz_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1523,7 +1523,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:nether_quartz_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_alienis")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -1533,7 +1533,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_alienis>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_rift_mover_input")
     .duration(140)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1552,7 +1552,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:rift_mover_input>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_distillery")
     .duration(160)
     .perTick(true).inputFE(4000).perTick(false)
@@ -1568,7 +1568,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:distillery>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_glowstone_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1581,7 +1581,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:glowstone_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_vitreus")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -1591,7 +1591,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_vitreus>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_alkimia")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -1601,7 +1601,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_alkimia>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicadditions_infused_potato_chestplate")
     .duration(46)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1616,7 +1616,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicadditions:infused_potato_chest>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_copper_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1629,7 +1629,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:copper_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_3")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1642,7 +1642,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade:3>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_fancyBelt")
     .duration(12)
     .perTick(true).inputFE(1500).perTick(false)
@@ -1656,7 +1656,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:baubles:6>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_ThaumiumFortressLegs")
     .duration(40)
     .perTick(true).inputFE(2500).perTick(false)
@@ -1670,7 +1670,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:fortress_legs>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_vis_regenerator")
     .duration(42)
     .perTick(true).inputFE(5000).perTick(false)
@@ -1687,7 +1687,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:vis_regenerator>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_fancyRing")
     .duration(12)
     .perTick(true).inputFE(1500).perTick(false)
@@ -1701,7 +1701,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:baubles:5>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_rainbow_tablet")
     .duration(24)
     .perTick(true).inputFE(1500).perTick(false)
@@ -1717,7 +1717,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:rainbow_tablet> * 32)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_black_quartz_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1730,7 +1730,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:black_quartz_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_6")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1743,7 +1743,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade:6>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_end_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1756,7 +1756,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:end_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicadditions_infused_potato_boots")
     .duration(46)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1771,7 +1771,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicadditions:infused_potato_boots>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_diabolus")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -1781,7 +1781,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_diabolus>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_luna")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -1791,7 +1791,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_luna>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_blaze_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1804,7 +1804,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:blaze_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_certus_quartz_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1817,7 +1817,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:certus_quartz_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_fancyAmulet")
     .duration(12)
     .perTick(true).inputFE(1500).perTick(false)
@@ -1831,7 +1831,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:baubles:4>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_horseshoe")
     .duration(40)
     .perTick(true).inputFE(3500).perTick(false)
@@ -1845,7 +1845,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:horseshoe>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_vitium")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -1855,7 +1855,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_vitium>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_creeper_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1868,7 +1868,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:creeper_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_verdant_charm")
     .duration(30)
     .perTick(true).inputFE(3500).perTick(false)
@@ -1883,7 +1883,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:verdant_charm>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_voidseer_charm")
     .duration(200)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1901,7 +1901,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:voidseer_charm>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_blitz_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1914,7 +1914,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:blitz_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_verdant_charm_sustainer")
     .duration(32)
     .perTick(true).inputFE(3500).perTick(false)
@@ -1928,7 +1928,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:verdant_charm>.withTag({"type":"2b"}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_blizz_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1941,7 +1941,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:blizz_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_impetus_mirror")
     .duration(100)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1957,7 +1957,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:impetus_mirror>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_desiderium")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -1967,7 +1967,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_desiderium>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicadditions_infused_potato_helm")
     .duration(46)
     .perTick(true).inputFE(6000).perTick(false)
@@ -1982,7 +1982,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicadditions:infused_potato_helm>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_bronze_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -1995,7 +1995,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:bronze_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_warding_sigil")
     .duration(44)
     .perTick(true).inputFE(3500).perTick(false)
@@ -2010,7 +2010,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:material:1>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_lead_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2023,7 +2023,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:lead_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_lapis_lazuli_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2036,7 +2036,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:lapis_lazuli_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_osmium_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2049,7 +2049,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:osmium_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_scorned_brick_witches_altar")
     .duration(33)
     .perTick(true).inputFE(3500).perTick(false)
@@ -2066,7 +2066,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:scorned_brick_witches_altar>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_11")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -2079,7 +2079,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade:11>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_AlchemicalConstruct")
     .duration(8)
     .perTick(true).inputFE(1000).perTick(false)
@@ -2092,7 +2092,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:metal_alchemical>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_fortress_helm_grinning_devil")
     .duration(36)
     .perTick(true).inputFE(5000).perTick(false)
@@ -2108,7 +2108,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:fortress_helm>.withTag({"mask":"0"}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_Mirror")
     .duration(24)
     .perTick(true).inputFE(1500).perTick(false)
@@ -2123,7 +2123,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:mirror>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_iron_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2136,7 +2136,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:iron_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_invar_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2149,7 +2149,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:invar_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_ElementalPick")
     .duration(56)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2166,7 +2166,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:elemental_pick>.withTag({"infench":[{"lvl":"1s","id":"4s"},{"lvl":"2s","id":"3s"}]}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_refined_obsidian_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2179,7 +2179,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:refined_obsidian_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("cloud_ring")
     .duration(10)
     .perTick(true).inputFE(1000).perTick(false)
@@ -2190,7 +2190,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:cloud_ring>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_ElementalHoe")
     .duration(56)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2206,7 +2206,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:elemental_hoe>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_VoidRobeLegs")
     .duration(44)
     .perTick(true).inputFE(5000).perTick(false)
@@ -2224,7 +2224,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:void_robe_legs>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_fabrico")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2234,7 +2234,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_fabrico>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_menril_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2247,7 +2247,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:menril_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_volatus")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2257,7 +2257,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_volatus>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_impulse_cannon")
     .duration(152)
     .perTick(true).inputFE(7000).perTick(false)
@@ -2279,7 +2279,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:impulse_cannon>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_lux")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2289,7 +2289,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_lux>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_gelum")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2299,7 +2299,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_gelum>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_ElementalShovel")
     .duration(56)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2315,7 +2315,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:elemental_shovel>.withTag({"infench":[{"lvl":"1s","id":"1s"}]}))
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_autocaster_placer")
     .duration(130)
     .perTick(true).inputFE(6000).perTick(false)
@@ -2333,7 +2333,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:autocaster_placer>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_stability_field_generator")
     .duration(128)
     .perTick(true).inputFE(5000).perTick(false)
@@ -2350,7 +2350,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:stability_field_generator>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicadditions_infused_potato_leggings")
     .duration(46)
     .perTick(true).inputFE(6000).perTick(false)
@@ -2365,7 +2365,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicadditions:infused_potato_legs>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_ordo")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2375,7 +2375,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_ordo>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_obsidian_witches_altar")
     .duration(33)
     .perTick(true).inputFE(3500).perTick(false)
@@ -2392,7 +2392,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:obsidian_witches_altar>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_elytra_harness")
     .duration(70)
     .perTick(true).inputFE(5000).perTick(false)
@@ -2407,7 +2407,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:elytra_harness>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_cognitio")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2417,7 +2417,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_cognitio>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_electrum_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2430,7 +2430,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:electrum_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_ThaumiumFortressHelm")
     .duration(40)
     .perTick(true).inputFE(2500).perTick(false)
@@ -2444,7 +2444,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:fortress_helm>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_thaumostatic_harness_augment_1")
     .duration(45)
     .perTick(true).inputFE(5000).perTick(false)
@@ -2458,7 +2458,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:thaumostatic_harness_augment:1>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_herba")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2468,7 +2468,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_herba>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_MirrorEssentia")
     .duration(28)
     .perTick(true).inputFE(1500).perTick(false)
@@ -2483,7 +2483,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:mirror_essentia>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("rftools_infused_enderpearl")
     .duration(58)
     .perTick(true).inputFE(7000).perTick(false)
@@ -2499,7 +2499,7 @@ auto_infusion_matrix.start()
     .outputItems(<rftools:infused_enderpearl>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_CuriosityBand")
     .duration(100)
     .perTick(true).inputFE(2500).perTick(false)
@@ -2515,7 +2515,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:curiosity_band>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_seal_copier")
     .duration(17)
     .perTick(true).inputFE(1500).perTick(false)
@@ -2532,7 +2532,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:seal_copier>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_basalz_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2545,7 +2545,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:basalz_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_tenebrae")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2555,7 +2555,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_tenebrae>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_praecantatio")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2565,7 +2565,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_praecantatio>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_moon_stone_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2578,7 +2578,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:moonstone_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_crystal_perditio")
     .duration(5)
     .perTick(true).inputFE(1000).perTick(false)
@@ -2591,7 +2591,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:crystal_perditio>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_intermedium_ingot")
     .duration(4)
     .perTick(true).inputFE(1500).perTick(false)
@@ -2602,7 +2602,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:crafting:35>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_perditio")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2612,7 +2612,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_perditio>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_energy_storage_core")
     .duration(122)
     .perTick(true).inputFE(7000).perTick(false)
@@ -2628,7 +2628,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:energy_storage_core>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_fluix_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2641,7 +2641,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:fluix_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicenergistics_blank_knowledge_core")
     .duration(16)
     .perTick(true).inputFE(8000).perTick(false)
@@ -2658,7 +2658,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicenergistics:blank_knowledge_core>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_aer")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2668,7 +2668,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_aer>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_ritual_chalk")
     .duration(8)
     .perTick(true).inputFE(1500).perTick(false)
@@ -2681,7 +2681,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:ritual_chalk>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_witches_cauldron")
     .duration(130)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2696,7 +2696,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:witches_cauldron>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("rftools_infused_diamond")
     .duration(58)
     .perTick(true).inputFE(7000).perTick(false)
@@ -2712,7 +2712,7 @@ auto_infusion_matrix.start()
     .outputItems(<rftools:infused_diamond>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_amulet_vis")
     .duration(40)
     .perTick(true).inputFE(3500).perTick(false)
@@ -2729,7 +2729,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:amulet_vis:1>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_CausalityCollapser")
     .duration(26)
     .perTick(true).inputFE(5000).perTick(false)
@@ -2746,7 +2746,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:causality_collapser>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_void_recharge_pedestal")
     .duration(158)
     .perTick(true).inputFE(6000).perTick(false)
@@ -2763,7 +2763,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:void_recharge_pedestal>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_stabilized_end_crystal")
     .duration(72)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2779,7 +2779,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:stabilized_end_crystal>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_ThaumiumFortressChest")
     .duration(40)
     .perTick(true).inputFE(2500).perTick(false)
@@ -2793,7 +2793,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:fortress_chest>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumicaugmentation_impetus_cell")
     .duration(150)
     .perTick(true).inputFE(6000).perTick(false)
@@ -2808,7 +2808,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumicaugmentation:material:3>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_victus")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2818,7 +2818,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_victus>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_instrumentum")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2828,7 +2828,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_instrumentum>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_motus")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2838,7 +2838,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_motus>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_mandrake_seeds")
     .duration(108)
     .perTick(true).inputFE(3500).perTick(false)
@@ -2857,7 +2857,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:mandrake_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_ArcaneBore")
     .duration(80)
     .perTick(true).inputFE(2500).perTick(false)
@@ -2877,7 +2877,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:turret:2>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_mortuus")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2887,7 +2887,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_mortuus>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_coquina_witches_altar")
     .duration(33)
     .perTick(true).inputFE(3500).perTick(false)
@@ -2904,7 +2904,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:coquina_witches_altar>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("thaumcraft_LampFertility")
     .duration(24)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2920,7 +2920,7 @@ auto_infusion_matrix.start()
     .outputItems(<thaumcraft:lamp_fertility>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_skeleton_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2933,7 +2933,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:skeleton_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("bewitchment_hellebore_seeds")
     .duration(84)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2949,7 +2949,7 @@ auto_infusion_matrix.start()
     .outputItems(<bewitchment:hellebore_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_7")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -2962,7 +2962,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade:7>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("mysticalagriculture_dark_gem_seeds")
     .duration(40)
     .perTick(true).inputFE(3000).perTick(false)
@@ -2975,7 +2975,7 @@ auto_infusion_matrix.start()
     .outputItems(<mysticalagriculture:dark_gem_seeds>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_humanus")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)
@@ -2985,7 +2985,7 @@ auto_infusion_matrix.start()
     .outputItems(<contenttweaker:condensed_vis_crystal_humanus>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("draconicevolution_tool_upgrade_5")
     .duration(28)
     .perTick(true).inputFE(6000).perTick(false)
@@ -2998,7 +2998,7 @@ auto_infusion_matrix.start()
     .outputItems(<draconicevolution:tool_upgrade:5>)
     .buildAndRegister();
 
-auto_infusion_matrix.start()
+map.start()
     .name("contenttweaker_condensed_vis_crystal_aqua")
     .duration(6)
     .perTick(true).inputFE(2000).perTick(false)

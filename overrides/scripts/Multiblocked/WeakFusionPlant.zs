@@ -14,10 +14,10 @@ import crafttweaker.text.ITextComponent;
 
 print("STARTING WeakFusionPlant.zs");
 
-val weak_fusion_plant = RecipeMap("weak_fusion_plant") as RecipeMap;
-RecipeMap.register(weak_fusion_plant);
+val map = RecipeMap("weak_fusion_plant") as RecipeMap;
+RecipeMap.register(map);
 
-weak_fusion_plant.start()
+map.start()
     .name("thorium")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -27,7 +27,7 @@ weak_fusion_plant.start()
     .outputItems(<alchemistry:element:90> * 16)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("contenttweaker_proton_electron")
     .duration(1)
     .perTick(true).inputFE(3000000).perTick(false)
@@ -39,7 +39,7 @@ weak_fusion_plant.start()
                  <contenttweaker:electron>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriculture_peridot_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -51,7 +51,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagriculture:peridot_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriculture_sapphire_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -63,7 +63,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagriculture:sapphire_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriculture_rock_crystal_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -76,7 +76,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagriculture:rock_crystal_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriculture_chrome_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -88,7 +88,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagriculture:chrome_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriculture_ruby_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -100,7 +100,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagriculture:ruby_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("uranium")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -110,7 +110,7 @@ weak_fusion_plant.start()
     .outputItems(<alchemistry:element:92> * 16)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("radium")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -120,7 +120,7 @@ weak_fusion_plant.start()
     .outputItems(<alchemistry:element:88> * 16)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("contenttweaker_perfect_vacuum")
     .duration(1)
     .perTick(true).inputFE(6000000).perTick(false)
@@ -134,7 +134,7 @@ weak_fusion_plant.start()
     .outputItems(<contenttweaker:perfect_vacuum> * 3)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriadditions_tier_6_crafting_seed")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -145,7 +145,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagradditions:insanium:1>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("contenttweaker_solar_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -157,7 +157,7 @@ weak_fusion_plant.start()
     .outputItems(<contenttweaker:solar_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriculture_boron_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -169,7 +169,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagriculture:boron_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriadditions_inferium_seeds_tier_6")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -180,7 +180,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagradditions:tier6_inferium_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriculture_uranium_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -192,7 +192,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagriculture:uranium_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriculture_magnesium_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -204,7 +204,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagriculture:magnesium_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("plutonium")
     .duration(120)
     .perTick(true).inputFE(3000000).perTick(false)
@@ -214,7 +214,7 @@ weak_fusion_plant.start()
     .outputItems(<alchemistry:element:94> * 16)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriadditions_insanium_ingot")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -224,7 +224,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagradditions:insanium:2>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriadditions_neutronium_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -237,7 +237,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagradditions:neutronium_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriculture_thorium_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -249,7 +249,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagriculture:thorium_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("contenttweaker_anti_hydrogen")
     .duration(1)
     .perTick(true).inputFE(3000000).perTick(false)
@@ -259,7 +259,7 @@ weak_fusion_plant.start()
     .outputItems(<contenttweaker:anti_hydrogen> * 16)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriculture_tungsten_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -271,7 +271,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagriculture:tungsten_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriadditions_nether_star_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -284,7 +284,7 @@ weak_fusion_plant.start()
     .outputItems(<mysticalagradditions:nether_star_seeds>)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("ytterbium")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)
@@ -294,7 +294,7 @@ weak_fusion_plant.start()
     .outputItems(<alchemistry:element:70> * 16)
     .buildAndRegister();
 
-weak_fusion_plant.start()
+map.start()
     .name("mysticalagriadditions_awakened_draconium_seeds")
     .duration(30)
     .perTick(true).inputFE(12000000).perTick(false)

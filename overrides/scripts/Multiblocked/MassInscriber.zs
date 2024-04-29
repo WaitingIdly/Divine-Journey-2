@@ -14,10 +14,10 @@ import crafttweaker.text.ITextComponent;
 
 print("STARTING MassInscriber.zs");
 
-val mass_inscriber = RecipeMap("mass_inscriber") as RecipeMap;
-RecipeMap.register(mass_inscriber);
+val map = RecipeMap("mass_inscriber") as RecipeMap;
+RecipeMap.register(map);
 
-mass_inscriber.start()
+map.start()
     .name("printed_engineering_circuit")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -25,7 +25,7 @@ mass_inscriber.start()
     .outputItems(<appliedenergistics2:material:17> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("printed_estimation_circuit")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -33,7 +33,7 @@ mass_inscriber.start()
     .outputItems(<contenttweaker:printed_estimation_circuit> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("clearance_processor")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -43,7 +43,7 @@ mass_inscriber.start()
     .outputItems(<contenttweaker:clearance_processor> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("printed_calculation_circuit")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -51,7 +51,7 @@ mass_inscriber.start()
     .outputItems(<appliedenergistics2:material:16> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("thaumium_processor")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -61,7 +61,7 @@ mass_inscriber.start()
     .outputItems(<contenttweaker:thaumium_processor> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("printed_clearance_circuit")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -69,7 +69,7 @@ mass_inscriber.start()
     .outputItems(<contenttweaker:printed_clearance_circuit> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("operation_processor")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -79,7 +79,7 @@ mass_inscriber.start()
     .outputItems(<contenttweaker:operation_processor> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("printed_silicon")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -87,7 +87,7 @@ mass_inscriber.start()
     .outputItems(<appliedenergistics2:material:20> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("methodology_processor")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -97,7 +97,7 @@ mass_inscriber.start()
     .outputItems(<contenttweaker:methodology_processor> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("calculation_processor")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -107,7 +107,7 @@ mass_inscriber.start()
     .outputItems(<appliedenergistics2:material:23> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("scheduling_processor")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -117,7 +117,7 @@ mass_inscriber.start()
     .outputItems(<contenttweaker:scheduling_processor> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("printed_operation_circuit")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -125,7 +125,7 @@ mass_inscriber.start()
     .outputItems(<contenttweaker:printed_operation_circuit> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("printed_scheduling_circuit")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -133,7 +133,7 @@ mass_inscriber.start()
     .outputItems(<contenttweaker:printed_scheduling_circuit> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("printed_logic_circuit")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -141,7 +141,7 @@ mass_inscriber.start()
     .outputItems(<appliedenergistics2:material:18> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("printed_methodology_circuit")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -149,7 +149,7 @@ mass_inscriber.start()
     .outputItems(<contenttweaker:printed_methodolgy_circuit> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("printed_thaumium_circuit")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -157,7 +157,7 @@ mass_inscriber.start()
     .outputItems(<contenttweaker:printed_thaumium_circuit> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("logic_processor")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -167,7 +167,7 @@ mass_inscriber.start()
     .outputItems(<appliedenergistics2:material:22> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("engineering_processor")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)
@@ -177,7 +177,7 @@ mass_inscriber.start()
     .outputItems(<appliedenergistics2:material:24> * 8)
     .buildAndRegister();
 
-mass_inscriber.start()
+map.start()
     .name("estimation_processor")
     .duration(1)
     .perTick(true).inputFE(20000).perTick(false)

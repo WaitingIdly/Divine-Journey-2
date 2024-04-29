@@ -14,10 +14,10 @@ import crafttweaker.text.ITextComponent;
 
 print("STARTING MobLootFabricator.zs");
 
-val mob_loot_fabricator = RecipeMap("mob_loot_fabricator") as RecipeMap;
-RecipeMap.register(mob_loot_fabricator);
+val map = RecipeMap("mob_loot_fabricator") as RecipeMap;
+RecipeMap.register(map);
 
-mob_loot_fabricator.start()
+map.start()
     .name("abyssalcraft")
     .duration(20)
     .inputItems(<abyssalcraft:lifecrystal>)
@@ -33,7 +33,7 @@ mob_loot_fabricator.start()
                  <contenttweaker:soul_of_the_dark_realm>)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("end")
     .duration(20)
     .inputItems(<contenttweaker:stabilized_end_crystal>)
@@ -46,7 +46,7 @@ mob_loot_fabricator.start()
                  <minecraft:shulker_shell> * 4)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("vethea")
     .duration(20)
     .inputItems(<divinerpg:moon_clock>)
@@ -58,7 +58,7 @@ mob_loot_fabricator.start()
                  <divinerpg:acid> * 32)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("nether")
     .duration(20)
     .inputItems(<thaumicaugmentation:augment_builder_power>.withTag({"id":"thaumicaugmentation:strength_nether"}))
@@ -77,7 +77,7 @@ mob_loot_fabricator.start()
                  <divinerpg:purple_blaze>)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("twilight_forest")
     .duration(20)
     .inputItems(<bewitchment:ravens_feather>)
@@ -92,7 +92,7 @@ mob_loot_fabricator.start()
                  <twilightforest:arctic_fur> * 64)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("evilcraft")
     .duration(20)
     .inputItems(<evilcraft:sanguinary_pedestal:1>)
@@ -101,7 +101,7 @@ mob_loot_fabricator.start()
     .outputFluids(<liquid:evilcraftblood> * 8000)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("gaia_spirits")
     .duration(20)
     .inputItems(<botania:laputashard:19>)
@@ -109,7 +109,7 @@ mob_loot_fabricator.start()
     .outputItems(<botania:manaresource:5> * 4)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("elemental")
     .duration(20)
     .inputItems(<bloodmagic:sigil_elemental_affinity>)
@@ -123,7 +123,7 @@ mob_loot_fabricator.start()
                  <thermalfoundation:material:2052> * 64)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("passive")
     .duration(20)
     .inputItems(<torchmaster:dread_lamp>)
@@ -144,7 +144,7 @@ mob_loot_fabricator.start()
                  <natura:materials:6> * 64)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("shards")
     .duration(20)
     .inputItems(<divinerpg:arcanium>)
@@ -158,7 +158,7 @@ mob_loot_fabricator.start()
                  <divinerpg:collector_fragments> * 64)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("twilight_forest_bosses")
     .duration(20)
     .inputItems(<twilightforest:lamp_of_cinders>)
@@ -179,7 +179,7 @@ mob_loot_fabricator.start()
                  <twilightforest:hydra_chop>)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("vanilla_hostile")
     .duration(20)
     .inputItems(<mob_grinding_utils:saw>)
@@ -199,7 +199,7 @@ mob_loot_fabricator.start()
                  <minecraft:glass_bottle> * 16)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("clock")
     .duration(20)
     .inputItems(<divinerpg:twilight_clock>)
@@ -219,7 +219,7 @@ mob_loot_fabricator.start()
                  <divinerpg:mortum_heart>)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("vanilla_hostile_basic")
     .duration(20)
     .inputItems(<enderio:block_killer_joe>)
@@ -234,7 +234,7 @@ mob_loot_fabricator.start()
                  <actuallyadditions:item_solidified_experience> * 64)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("blood_magic")
     .duration(20)
     .inputItems(<bloodmagic:blood_shard>)
@@ -249,7 +249,7 @@ mob_loot_fabricator.start()
 //                  Will(steadfast, max:100, min:0)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("lightningcraft")
     .duration(20)
     .inputItems(<lightningcraft:item_magnet:3>)
@@ -259,7 +259,7 @@ mob_loot_fabricator.start()
                  <lightningcraft:material:12> * 64)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("special_unstackables")
     .duration(20)
     .inputItems(<contenttweaker:woodland_mansion_locator_token>)
@@ -268,7 +268,7 @@ mob_loot_fabricator.start()
                  <minecraft:totem_of_undying>)
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("thaumcraft_wisps")
     .duration(20)
     .inputItems(<thaumicaugmentation:autocaster_placer>)
@@ -316,7 +316,7 @@ mob_loot_fabricator.start()
                  <thaumcraft:crystal_essence>.withTag({"Aspects":[{"amount":"1","key":"diabolus"}]}))
     .buildAndRegister();
 
-mob_loot_fabricator.start()
+map.start()
     .name("bewitchment")
     .duration(20)
     .inputItems(<bewitchment:triskelion>)

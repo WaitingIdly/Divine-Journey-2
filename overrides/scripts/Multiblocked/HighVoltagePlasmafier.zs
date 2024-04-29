@@ -14,10 +14,10 @@ import crafttweaker.text.ITextComponent;
 
 print("STARTING HighVoltagePlasmafier.zs");
 
-val high_voltage_plasmafier = RecipeMap("high_voltage_plasmafier") as RecipeMap;
-RecipeMap.register(high_voltage_plasmafier);
+val map = RecipeMap("high_voltage_plasmafier") as RecipeMap;
+RecipeMap.register(map);
 
-high_voltage_plasmafier.start()
+map.start()
     .name("contenttweaker_essence_of_time")
     .duration(600)
     .perTick(true).inputFE(16000000).perTick(false)
@@ -27,7 +27,7 @@ high_voltage_plasmafier.start()
     .outputItems(<contenttweaker:essence_of_time>)
     .buildAndRegister();
 
-high_voltage_plasmafier.start()
+map.start()
     .name("contenttweaker_essence_of_matter")
     .duration(600)
     .perTick(true).inputFE(16000000).perTick(false)
@@ -37,7 +37,7 @@ high_voltage_plasmafier.start()
     .outputItems(<contenttweaker:essence_of_matter>)
     .buildAndRegister();
 
-high_voltage_plasmafier.start()
+map.start()
     .name("contenttweaker_essence_of_repetition")
     .duration(600)
     .perTick(true).inputFE(16000000).perTick(false)
@@ -46,7 +46,7 @@ high_voltage_plasmafier.start()
     .outputItems(<contenttweaker:essence_of_repetition>)
     .buildAndRegister();
 
-high_voltage_plasmafier.start()
+map.start()
     .name("avaritia_cosmic_meatballs")
     .duration(600)
     .perTick(true).inputFE(16000000).perTick(false)

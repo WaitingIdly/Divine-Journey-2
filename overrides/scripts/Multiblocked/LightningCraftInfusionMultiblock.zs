@@ -14,10 +14,10 @@ import crafttweaker.text.ITextComponent;
 
 print("STARTING LightningCraftInfusionMultiblock.zs");
 
-val lightningcraft_infusion_multiblock = RecipeMap("lightningcraft_infusion_multiblock") as RecipeMap;
-RecipeMap.register(lightningcraft_infusion_multiblock);
+val map = RecipeMap("lightningcraft_infusion_multiblock") as RecipeMap;
+RecipeMap.register(map);
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("skyfather_ingot_recipe")
     .duration(300)
     .perTick(true).inputFE(3000).perTick(false)
@@ -27,7 +27,7 @@ lightningcraft_infusion_multiblock.start()
     .build();
 
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("ichor")
     .duration(300)
     .perTick(true).inputFE(5000).perTick(false)
@@ -38,7 +38,7 @@ lightningcraft_infusion_multiblock.start()
     .build();
 
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("mystic_ingot_recipe")
     .duration(300)
     .perTick(true).inputFE(30000).perTick(false)
@@ -50,7 +50,7 @@ lightningcraft_infusion_multiblock.start()
 
 
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("empowered_underpowder_recipe")
     .duration(300)
     .perTick(true).inputFE(7500).perTick(false)
@@ -60,7 +60,7 @@ lightningcraft_infusion_multiblock.start()
     .outputItems(<lightningcraft:material:13>)
     .build();
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("divine_underpowder_recipe")
     .duration(300)
     .perTick(true).inputFE(15000).perTick(false)
@@ -70,7 +70,7 @@ lightningcraft_infusion_multiblock.start()
     .build();
 
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("encorcelled_core_recipe")
     .duration(300)
     .perTick(true).inputFE(50000).perTick(false)
@@ -81,7 +81,7 @@ lightningcraft_infusion_multiblock.start()
     .build();
 
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("bonemeal_recipe")
     .duration(300)
     .perTick(true).inputFE(1000).perTick(false)
@@ -92,7 +92,7 @@ lightningcraft_infusion_multiblock.start()
     .build();
 
 # Add Electricium to Modular Machine
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("electricium_ingot_recipe")
     .duration(300)
     .perTick(true).inputFE(1000).perTick(false)
@@ -102,7 +102,7 @@ lightningcraft_infusion_multiblock.start()
     .outputItems(<lightningcraft:ingot:0>)
     .build();
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("electricium_block_recipe")
     .duration(300)
     .perTick(true).inputFE(1000).perTick(false)
@@ -113,7 +113,7 @@ lightningcraft_infusion_multiblock.start()
     .build();
 
 # Add weapons to Modular Machine
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("soul_sword")
     .duration(300)
     .perTick(true).inputFE(5000).perTick(false)
@@ -122,7 +122,7 @@ lightningcraft_infusion_multiblock.start()
     .outputItems(<lightningcraft:soul_sword>)
     .build();
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("zombie_sword")
     .duration(300)
     .perTick(true).inputFE(5000).perTick(false)
@@ -131,7 +131,7 @@ lightningcraft_infusion_multiblock.start()
     .outputItems(<lightningcraft:zombie_sword>)
     .build();
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("feather_sword")
     .duration(300)
     .perTick(true).inputFE(5000).perTick(false)
@@ -140,7 +140,7 @@ lightningcraft_infusion_multiblock.start()
     .outputItems(<lightningcraft:feather_sword>)
     .build();
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("ender_sword")
     .duration(300)
     .perTick(true).inputFE(5000).perTick(false)
@@ -149,7 +149,7 @@ lightningcraft_infusion_multiblock.start()
     .outputItems(<lightningcraft:ender_sword>)
     .build();
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("blaze_sword")
     .duration(300)
     .perTick(true).inputFE(5000).perTick(false)
@@ -158,7 +158,7 @@ lightningcraft_infusion_multiblock.start()
     .outputItems(<lightningcraft:blaze_sword>)
     .build();
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("ice_sword")
     .duration(300)
     .perTick(true).inputFE(5000).perTick(false)
@@ -167,7 +167,7 @@ lightningcraft_infusion_multiblock.start()
     .outputItems(<lightningcraft:ice_sword>)
     .build();
 
-lightningcraft_infusion_multiblock.start()
+map.start()
     .name("mystic_sword")
     .duration(300)
     .perTick(true).inputFE(5000).perTick(false)

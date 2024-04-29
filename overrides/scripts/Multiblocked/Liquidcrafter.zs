@@ -14,13 +14,13 @@ import crafttweaker.text.ITextComponent;
 
 print("STARTING Liquidcrafter.zs");
 
-val liquidcrafter = RecipeMap("liquidcrafter") as RecipeMap;
-RecipeMap.register(liquidcrafter);
+val map = RecipeMap("liquidcrafter") as RecipeMap;
+RecipeMap.register(map);
 
 <contenttweaker:starlight>.addTooltip("Used to represent Liquid Starlight in a Multiblock'd Multiblock preview.");
 
 
-liquidcrafter.start()
+map.start()
     .name("contenttweaker_essence_of_dimensionality")
     .duration(100)
     .perTick(true).inputFE(500000).perTick(false)
@@ -31,7 +31,7 @@ liquidcrafter.start()
     .outputItems(<contenttweaker:essence_of_dimensionality>)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("mercury_iodine")
     .duration(100)
     .perTick(true).inputFE(3000).perTick(false)
@@ -43,7 +43,7 @@ liquidcrafter.start()
                   <liquid:impure_mercury_iodine_mixture> * 144)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("contenttweaker_essence_of_thought")
     .duration(100)
     .perTick(true).inputFE(500000).perTick(false)
@@ -57,7 +57,7 @@ liquidcrafter.start()
     .outputItems(<contenttweaker:essence_of_thought>)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("iodine")
     .duration(100)
     .perTick(true).inputFE(3000).perTick(false)
@@ -67,7 +67,7 @@ liquidcrafter.start()
     .outputFluids(<liquid:liquid_iodine> * 500)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("contenttweaker_oxygen_rich_barium_calcite_perpetuator")
     .duration(200)
     .perTick(true).inputFE(3000).perTick(false)
@@ -81,7 +81,7 @@ liquidcrafter.start()
     .outputItems(<contenttweaker:oxygen_rich_barium_calcite_perpetuator>)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("draconicevolution_tiny_chaos_fragment")
     .duration(5)
     .perTick(true).inputFE(3000).perTick(false)
@@ -91,7 +91,7 @@ liquidcrafter.start()
     .outputItems(<draconicevolution:chaos_shard:3> * 12)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("contenttweaker_empowered_thermal_controller")
     .duration(100)
     .perTick(true).inputFE(5000).perTick(false)
@@ -102,7 +102,7 @@ liquidcrafter.start()
     .outputItems(<contenttweaker:empowered_thermal_controller>)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("oil")
     .duration(100)
     .perTick(true).inputFE(3000).perTick(false)
@@ -113,7 +113,7 @@ liquidcrafter.start()
     .outputFluids(<liquid:oil> * 1000)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("contenttweaker_highly_radioactive_dimension_splitting_compound")
     .duration(200)
     .perTick(true).inputFE(200000).perTick(false)
@@ -124,7 +124,7 @@ liquidcrafter.start()
     .outputItems(<contenttweaker:highly_radioactive_dimension_splitting_compound>)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("contenttweaker_solar_ingot")
     .duration(100)
     .perTick(true).inputFE(5000).perTick(false)
@@ -138,7 +138,7 @@ liquidcrafter.start()
     .outputItems(<contenttweaker:solar_ingot> * 8)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("contenttweaker_zysc_baach_sheet")
     .duration(100)
     .perTick(true).inputFE(6000).perTick(false)
@@ -150,7 +150,7 @@ liquidcrafter.start()
     .outputItems(<contenttweaker:zysc_baach_sheet>)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("contenttweaker_clay")
     .duration(200)
     .perTick(true).inputFE(16000000).perTick(false)
@@ -165,7 +165,7 @@ liquidcrafter.start()
     .outputItems(<contenttweaker:clay>)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("sulfuric_acid")
     .duration(100)
     .perTick(true).inputFE(200).perTick(false)
@@ -174,7 +174,7 @@ liquidcrafter.start()
     .outputFluids(<liquid:sulphuricacid> * 1000)
     .buildAndRegister();
 
-liquidcrafter.start()
+map.start()
     .name("contenttweaker_empowered_solar_dust")
     .duration(100)
     .perTick(true).inputFE(5000).perTick(false)

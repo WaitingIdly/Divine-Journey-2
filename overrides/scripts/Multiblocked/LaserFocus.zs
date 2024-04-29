@@ -14,10 +14,10 @@ import crafttweaker.text.ITextComponent;
 
 print("STARTING LaserFocus.zs");
 
-val laser_focus = RecipeMap("laser_focus") as RecipeMap;
-RecipeMap.register(laser_focus);
+val map = RecipeMap("laser_focus") as RecipeMap;
+RecipeMap.register(map);
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_zinc_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -29,7 +29,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriadditions_dragon_egg_crux")
     .duration(600)
     .perTick(true).inputFE(32000).perTick(false)
@@ -42,7 +42,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("draconicevolution_wyvern_energy_relay_crystal")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -54,7 +54,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_desh_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -66,7 +66,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_starmetal_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -78,7 +78,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("contenttweaker_alchemical_machine_frame")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -93,7 +93,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_inferium_seeds_tier_5")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -104,7 +104,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("draconicadditions_basic_necklace_of_shielding")
     .duration(100)
     .perTick(true).inputFE(32000).perTick(false)
@@ -116,7 +116,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_supremium_ingot")
     .duration(5)
     .perTick(true).inputFE(32000).perTick(false)
@@ -127,7 +127,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_end_steel_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -141,7 +141,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_wither_skeleton_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -154,7 +154,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_void_metal_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -167,7 +167,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_cold_iron_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -180,7 +180,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_tier_5_mob_chunk")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -191,7 +191,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("draconicevolution_charged_draconium_block")
     .duration(40)
     .perTick(true).inputFE(32000).perTick(false)
@@ -201,7 +201,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_yellorium_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -213,7 +213,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_titanium_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -225,7 +225,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("contenttweaker_elevatium_ingot")
     .duration(40)
     .perTick(true).inputFE(32000).perTick(false)
@@ -250,7 +250,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("draconicevolution_wyvern_flux_capacitor")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -262,7 +262,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_terrasteel_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -275,7 +275,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("draconicevolution_draconic_energy_core")
     .duration(20)
     .perTick(true).inputFE(32000).perTick(false)
@@ -287,7 +287,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_tier_5_crafting_seed")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -298,7 +298,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("plustic_mirion_ingot")
     .duration(5)
     .perTick(true).inputFE(32000).perTick(false)
@@ -312,7 +312,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_alchemical_brass_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -325,7 +325,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("contenttweaker_plasma_core")
     .duration(20)
     .perTick(true).inputFE(32000).perTick(false)
@@ -335,7 +335,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("avaritia_extreme_crafting_table")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -346,7 +346,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("draconicevolution_energy_core_stabilizer")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -357,7 +357,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_draconium_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -369,7 +369,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("contenttweaker_stabilized_dimensional_machine_frame")
     .duration(200)
     .perTick(true).inputFE(1024000).perTick(false)
@@ -383,7 +383,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_thaumium_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -396,7 +396,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("draconicevolution_basic_energy_relay_crystal")
     .duration(100)
     .perTick(true).inputFE(32000).perTick(false)
@@ -408,7 +408,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("draconicevolution_wyvern_energy_core")
     .duration(20)
     .perTick(true).inputFE(32000).perTick(false)
@@ -419,7 +419,7 @@ laser_focus.start()
     .buildAndRegister();
 
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculturetieredcrystals_supremium_infusion_crystal")
     .duration(400)
     .perTick(true).inputFE(128000).perTick(false)
@@ -430,7 +430,7 @@ laser_focus.start()
     .outputItems(<matc:supremiumcrystal>)
     .buildAndRegister();
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_aquamarine_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
@@ -441,7 +441,7 @@ laser_focus.start()
     .outputItems(<mysticalagriculture:aquamarine_seeds>)
     .buildAndRegister();
 
-laser_focus.start()
+map.start()
     .name("mysticalagriadditions_dragon_egg_seeds")
     .duration(600)
     .perTick(true).inputFE(32000).perTick(false)
@@ -453,7 +453,7 @@ laser_focus.start()
     .outputItems(<mysticalagradditions:dragon_egg_seeds>)
     .buildAndRegister();
 
-laser_focus.start()
+map.start()
     .name("mysticalagriculture_meteoric_iron_seeds")
     .duration(200)
     .perTick(true).inputFE(32000).perTick(false)
