@@ -14,10 +14,13 @@ import crafttweaker.text.ITextComponent;
 
 print("STARTING Liquidcrafter.zs");
 
+val liquidcrafter = RecipeMap("liquidcrafter") as RecipeMap;
+RecipeMap.register(liquidcrafter);
+
 <contenttweaker:starlight>.addTooltip("Used to represent Liquid Starlight in a Multiblock'd Multiblock preview.");
 
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("contenttweaker_essence_of_dimensionality")
     .duration(100)
     .perTick(true).inputFE(500000).perTick(false)
@@ -28,7 +31,7 @@ print("STARTING Liquidcrafter.zs");
     .outputItems(<contenttweaker:essence_of_dimensionality>)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("mercury_iodine")
     .duration(100)
     .perTick(true).inputFE(3000).perTick(false)
@@ -40,7 +43,7 @@ print("STARTING Liquidcrafter.zs");
                   <liquid:impure_mercury_iodine_mixture> * 144)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("contenttweaker_essence_of_thought")
     .duration(100)
     .perTick(true).inputFE(500000).perTick(false)
@@ -54,7 +57,7 @@ print("STARTING Liquidcrafter.zs");
     .outputItems(<contenttweaker:essence_of_thought>)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("iodine")
     .duration(100)
     .perTick(true).inputFE(3000).perTick(false)
@@ -64,7 +67,7 @@ print("STARTING Liquidcrafter.zs");
     .outputFluids(<liquid:liquid_iodine> * 500)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("contenttweaker_oxygen_rich_barium_calcite_perpetuator")
     .duration(200)
     .perTick(true).inputFE(3000).perTick(false)
@@ -78,7 +81,7 @@ print("STARTING Liquidcrafter.zs");
     .outputItems(<contenttweaker:oxygen_rich_barium_calcite_perpetuator>)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("draconicevolution_tiny_chaos_fragment")
     .duration(5)
     .perTick(true).inputFE(3000).perTick(false)
@@ -88,7 +91,7 @@ print("STARTING Liquidcrafter.zs");
     .outputItems(<draconicevolution:chaos_shard:3> * 12)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("contenttweaker_empowered_thermal_controller")
     .duration(100)
     .perTick(true).inputFE(5000).perTick(false)
@@ -99,7 +102,7 @@ print("STARTING Liquidcrafter.zs");
     .outputItems(<contenttweaker:empowered_thermal_controller>)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("oil")
     .duration(100)
     .perTick(true).inputFE(3000).perTick(false)
@@ -110,7 +113,7 @@ print("STARTING Liquidcrafter.zs");
     .outputFluids(<liquid:oil> * 1000)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("contenttweaker_highly_radioactive_dimension_splitting_compound")
     .duration(200)
     .perTick(true).inputFE(200000).perTick(false)
@@ -121,7 +124,7 @@ print("STARTING Liquidcrafter.zs");
     .outputItems(<contenttweaker:highly_radioactive_dimension_splitting_compound>)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("contenttweaker_solar_ingot")
     .duration(100)
     .perTick(true).inputFE(5000).perTick(false)
@@ -135,7 +138,7 @@ print("STARTING Liquidcrafter.zs");
     .outputItems(<contenttweaker:solar_ingot> * 8)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("contenttweaker_zysc_baach_sheet")
     .duration(100)
     .perTick(true).inputFE(6000).perTick(false)
@@ -147,7 +150,7 @@ print("STARTING Liquidcrafter.zs");
     .outputItems(<contenttweaker:zysc_baach_sheet>)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("contenttweaker_clay")
     .duration(200)
     .perTick(true).inputFE(16000000).perTick(false)
@@ -162,7 +165,7 @@ print("STARTING Liquidcrafter.zs");
     .outputItems(<contenttweaker:clay>)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("sulfuric_acid")
     .duration(100)
     .perTick(true).inputFE(200).perTick(false)
@@ -171,7 +174,7 @@ print("STARTING Liquidcrafter.zs");
     .outputFluids(<liquid:sulphuricacid> * 1000)
     .buildAndRegister();
 
-<mbd:recipe_map:liquidcrafter>.start()
+liquidcrafter.start()
     .name("contenttweaker_empowered_solar_dust")
     .duration(100)
     .perTick(true).inputFE(5000).perTick(false)
