@@ -1,21 +1,45 @@
 #loader multiblocked
 # Author: WaitingIdly
 
-import mods.multiblocked.MBDRegistry;
 import mods.multiblocked.definition.ControllerDefinition;
-import mods.multiblocked.definition.ComponentDefinition;
+import mods.multiblocked.MBDRegistry;
+import mods.multiblocked.pattern.CTPredicate;
+import mods.multiblocked.pattern.FactoryBlockPattern;
+import mods.multiblocked.pattern.RelativeDirection;
 import mods.multiblocked.recipe.RecipeMap;
-import mods.multiblocked.functions.ISetupRecipe;
-import mods.multiblocked.recipe.RecipeLogic;
-import mods.multiblocked.recipe.Recipe;
-import mods.thaumcraft.AspectStack;
-
-import crafttweaker.text.ITextComponent;
 
 print("STARTING LaserFocus.zs");
 
 val map = RecipeMap("laser_focus") as RecipeMap;
 RecipeMap.register(map);
+
+val controller = MBDRegistry.getDefinition("dj2:laser_focus") as ControllerDefinition;
+controller.recipeMap = map;
+controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
+    .aisle(" AABAA CCC", " DDDDD E E", "       E F", "       E  ", "       F  ", "          ", "          ", "          ", "          ")
+    .aisle("AAGGGAAAAA", "A     DAHA", "D      AHA", "       AAD", "      OAD ", "   AOOAD  ", "   DAAD   ", "    DD    ", "          ")
+    .aisle("AAGGGAAAAA", "@  I  DCJK", "D      CJA", "   L   CJA", "   M  A AD", "  AJAAJAD ", "  DAJJAD  ", "   DAAD   ", "    DD    ")
+    .aisle("AAGGGAAAAA", "A     DAHA", "D      AHA", "       AAD", "      OAD ", "   AOOAD  ", "   DAAD   ", "    DD    ", "          ")
+    .aisle(" AANAA CCC", " DDDDD E E", "       E F", "       E  ", "       F  ", "          ", "          ", "          ", "          ")
+    .where("A", CTPredicate.states(<blockstate:modularmachinery:blockcasing:casing=reinforced>))
+    .where("B", CTPredicate.states(<blockstate:modularmachinery:blockoutputbus:size=big>))
+    .where("C", CTPredicate.states(<blockstate:immersiveengineering:sheetmetal:type=lead>))
+    .where("D", CTPredicate.states(<blockstate:immersiveengineering:sheetmetal_slab:type=lead,slabtype=0>))
+    .where("E", CTPredicate.states(<blockstate:immersiveengineering:metal_decoration1>))
+    .where("F", CTPredicate.states(<blockstate:thaumicaugmentation:bars>))
+    .where("G", CTPredicate.states(<blockstate:modularmachinery:blockcasing:casing=firebox>))
+    .where("H", CTPredicate.states(<blockstate:contenttweaker:reinforced_glass_casing>))
+    .where("I", CTPredicate.states(<blockstate:contenttweaker:hyperglued_meteoric_casing>))
+    .where("J", CTPredicate.states(<blockstate:contenttweaker:portion_of_the_sun>))
+    .where("K", CTPredicate.states(<blockstate:modularmachinery:blockenergyinputhatch:size=huge>))
+    .where("L", CTPredicate.states(<blockstate:mekanism:machineblock2:type=laser>))
+    .where("M", CTPredicate.states(<blockstate:minecraft:stained_glass>))
+    .where("N", CTPredicate.states(<blockstate:modularmachinery:blockinputbus:size=big>))
+    .where("O", CTPredicate.states(<blockstate:immersiveengineering:sheetmetal_slab:type=lead,slabtype=1>))
+    .where("@", CTPredicate.states(<blockstate:dj2:laser_focus>).setCenter())
+    .where(" ", CTPredicate.getAny())
+    .where("-", CTPredicate.getAir())
+    .build();
 
 map.start()
     .name("mysticalagriculture_zinc_seeds")

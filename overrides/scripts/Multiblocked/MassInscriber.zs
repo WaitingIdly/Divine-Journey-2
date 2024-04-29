@@ -1,21 +1,35 @@
 #loader multiblocked
 # Author: WaitingIdly
 
-import mods.multiblocked.MBDRegistry;
 import mods.multiblocked.definition.ControllerDefinition;
-import mods.multiblocked.definition.ComponentDefinition;
+import mods.multiblocked.MBDRegistry;
+import mods.multiblocked.pattern.CTPredicate;
+import mods.multiblocked.pattern.FactoryBlockPattern;
+import mods.multiblocked.pattern.RelativeDirection;
 import mods.multiblocked.recipe.RecipeMap;
-import mods.multiblocked.functions.ISetupRecipe;
-import mods.multiblocked.recipe.RecipeLogic;
-import mods.multiblocked.recipe.Recipe;
-import mods.thaumcraft.AspectStack;
-
-import crafttweaker.text.ITextComponent;
 
 print("STARTING MassInscriber.zs");
 
 val map = RecipeMap("mass_inscriber") as RecipeMap;
 RecipeMap.register(map);
+
+val controller = MBDRegistry.getDefinition("dj2:mass_inscriber") as ControllerDefinition;
+controller.recipeMap = map;
+controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
+    .aisle(" A ", " B ", " B ", " B ", " C ")
+    .aisle("@DE", "BFB", "BFB", "BFB", "CDC")
+    .aisle(" G ", " B ", " B ", " B ", " C ")
+    .where("A", CTPredicate.states(<blockstate:modularmachinery:blockoutputbus:size=normal>))
+    .where("B", CTPredicate.states(<blockstate:contenttweaker:reinforced_glass_casing>))
+    .where("C", CTPredicate.states(<blockstate:modularmachinery:blockcasing:casing=reinforced>))
+    .where("D", CTPredicate.states(<blockstate:packagedauto:packager>))
+    .where("E", CTPredicate.states(<blockstate:modularmachinery:blockenergyinputhatch:size=big>))
+    .where("F", CTPredicate.states(<blockstate:appliedenergistics2:inscriber>))
+    .where("G", CTPredicate.states(<blockstate:modularmachinery:blockinputbus:size=normal>))
+    .where("@", CTPredicate.states(<blockstate:dj2:mass_inscriber>).setCenter())
+    .where(" ", CTPredicate.getAny())
+    .where("-", CTPredicate.getAir())
+    .build();
 
 map.start()
     .name("printed_engineering_circuit")

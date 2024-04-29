@@ -1,21 +1,37 @@
 #loader multiblocked
 # Author: WaitingIdly
 
-import mods.multiblocked.MBDRegistry;
 import mods.multiblocked.definition.ControllerDefinition;
-import mods.multiblocked.definition.ComponentDefinition;
+import mods.multiblocked.MBDRegistry;
+import mods.multiblocked.pattern.CTPredicate;
+import mods.multiblocked.pattern.FactoryBlockPattern;
+import mods.multiblocked.pattern.RelativeDirection;
 import mods.multiblocked.recipe.RecipeMap;
-import mods.multiblocked.functions.ISetupRecipe;
-import mods.multiblocked.recipe.RecipeLogic;
-import mods.multiblocked.recipe.Recipe;
-import mods.thaumcraft.AspectStack;
-
-import crafttweaker.text.ITextComponent;
 
 print("STARTING WeakFusionPlant.zs");
 
 val map = RecipeMap("weak_fusion_plant") as RecipeMap;
 RecipeMap.register(map);
+
+val controller = MBDRegistry.getDefinition("dj2:weak_fusion_plant") as ControllerDefinition;
+controller.recipeMap = map;
+controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
+    .aisle("AAAAA", "ABCBA", "ABBBA", "ABBBA", "AAAAA")
+    .aisle("ADEDA", "B   B", "B   B", "B   B", "ADEDA")
+    .aisle("AEEEA", "@ E F", "B E B", "B E B", "AEEEA")
+    .aisle("ADEDA", "B   B", "B   B", "B   B", "ADEDA")
+    .aisle("AAAAA", "ABGBA", "ABBBA", "ABBBA", "AAAAA")
+    .where("A", CTPredicate.states(<blockstate:modularmachinery:blockcasing:casing=reinforced>))
+    .where("B", CTPredicate.states(<blockstate:contenttweaker:reinforced_glass_casing>))
+    .where("C", CTPredicate.states(<blockstate:modularmachinery:blockoutputbus:size=huge>))
+    .where("D", CTPredicate.states(<blockstate:modularmachinery:blockcasing:casing=gearbox>))
+    .where("E", CTPredicate.states(<blockstate:modularmachinery:blockcasing:casing=circuitry>))
+    .where("F", CTPredicate.states(<blockstate:modularmachinery:blockenergyinputhatch:size=ludicrous>))
+    .where("G", CTPredicate.states(<blockstate:modularmachinery:blockinputbus:size=huge>))
+    .where("@", CTPredicate.states(<blockstate:dj2:weak_fusion_plant>).setCenter())
+    .where(" ", CTPredicate.getAny())
+    .where("-", CTPredicate.getAir())
+    .build();
 
 map.start()
     .name("thorium")

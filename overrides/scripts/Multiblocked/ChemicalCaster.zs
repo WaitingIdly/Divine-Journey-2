@@ -1,21 +1,43 @@
 #loader multiblocked
 # Author: WaitingIdly
 
-import mods.multiblocked.MBDRegistry;
 import mods.multiblocked.definition.ControllerDefinition;
-import mods.multiblocked.definition.ComponentDefinition;
+import mods.multiblocked.MBDRegistry;
+import mods.multiblocked.pattern.CTPredicate;
+import mods.multiblocked.pattern.FactoryBlockPattern;
+import mods.multiblocked.pattern.RelativeDirection;
 import mods.multiblocked.recipe.RecipeMap;
-import mods.multiblocked.functions.ISetupRecipe;
-import mods.multiblocked.recipe.RecipeLogic;
-import mods.multiblocked.recipe.Recipe;
-import mods.thaumcraft.AspectStack;
-
-import crafttweaker.text.ITextComponent;
 
 print("STARTING ChemicalCaster.zs");
 
 val map = RecipeMap("chemical_caster") as RecipeMap;
 RecipeMap.register(map);
+
+val controller = MBDRegistry.getDefinition("dj2:chemical_caster") as ControllerDefinition;
+controller.recipeMap = map;
+controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
+    .aisle("  A  ", "  B  ", "  B  ", "  B  ", "  C  ", "     ", "     ")
+    .aisle(" DED ", " FGF ", " FGF ", " FGF ", " F F ", "  D  ", "     ")
+    .aisle("@EHEI", "BGJGB", "BGKGB", "BGJGB", "C L C", " DLD ", "  D  ")
+    .aisle(" DED ", " FGF ", " FGF ", " FGF ", " F F ", "  D  ", "     ")
+    .aisle("  M  ", "  B  ", "  B  ", "  B  ", "  C  ", "     ", "     ")
+    .where("A", CTPredicate.states(<blockstate:modularmachinery:blockoutputbus:size=normal>))
+    .where("B", CTPredicate.states(<blockstate:tconstruct:smeltery_io>))
+    .where("C", CTPredicate.states(<blockstate:minecraft:stained_glass:color=pink>))
+    .where("D", CTPredicate.states(<blockstate:modularmachinery:blockcasing:casing=reinforced>))
+    .where("E", CTPredicate.states(<blockstate:tconstruct:casting:type=table>))
+    .where("F", CTPredicate.states(<blockstate:contenttweaker:reinforced_glass_casing>))
+    .where("G", CTPredicate.states(<blockstate:tconstruct:faucet>))
+    .where("H", CTPredicate.states(<blockstate:minecraft:stained_glass:color=magenta>))
+    .where("I", CTPredicate.states(<blockstate:modularmachinery:blockenergyinputhatch:size=huge>))
+    .where("J", CTPredicate.states(<blockstate:contenttweaker:crystal_core>))
+    .where("K", CTPredicate.states(<blockstate:draconicevolution:draconic_block>))
+    .where("L", CTPredicate.states(<blockstate:alchemistry:chemical_dissolver>))
+    .where("M", CTPredicate.states(<blockstate:modularmachinery:blockinputbus:size=normal>))
+    .where("@", CTPredicate.states(<blockstate:dj2:chemical_caster>).setCenter())
+    .where(" ", CTPredicate.getAny())
+    .where("-", CTPredicate.getAir())
+    .build();
 
 map.start()
     .name("alchemistry_ingot_19")

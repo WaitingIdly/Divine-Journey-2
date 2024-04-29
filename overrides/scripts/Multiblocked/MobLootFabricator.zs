@@ -1,21 +1,37 @@
 #loader multiblocked
 # Author: WaitingIdly
 
-import mods.multiblocked.MBDRegistry;
 import mods.multiblocked.definition.ControllerDefinition;
-import mods.multiblocked.definition.ComponentDefinition;
+import mods.multiblocked.MBDRegistry;
+import mods.multiblocked.pattern.CTPredicate;
+import mods.multiblocked.pattern.FactoryBlockPattern;
+import mods.multiblocked.pattern.RelativeDirection;
 import mods.multiblocked.recipe.RecipeMap;
-import mods.multiblocked.functions.ISetupRecipe;
-import mods.multiblocked.recipe.RecipeLogic;
-import mods.multiblocked.recipe.Recipe;
-import mods.thaumcraft.AspectStack;
-
-import crafttweaker.text.ITextComponent;
 
 print("STARTING MobLootFabricator.zs");
 
 val map = RecipeMap("mob_loot_fabricator") as RecipeMap;
 RecipeMap.register(map);
+
+val controller = MBDRegistry.getDefinition("dj2:mob_loot_fabricator") as ControllerDefinition;
+controller.recipeMap = map;
+controller.basePattern = FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.DOWN)
+    .aisle("ABBBA", "B   B", "B G B", "B   B", "ABBBA")
+    .aisle("C   C", "     ", "     ", "     ", "C   C")
+    .aisle("C   C", "     ", "     ", "     ", "C   C")
+    .aisle("C   C", "     ", "  F  ", "     ", "C   C")
+    .aisle("AB@BA", "BBDBB", "BBBBB", "BBEBB", "ABBBA")
+    .where("A", CTPredicate.states(<blockstate:astralsorcery:blockblackmarble:marbletype=chiseled>))
+    .where("B", CTPredicate.states(<blockstate:astralsorcery:blockblackmarble:marbletype=arch>))
+    .where("C", CTPredicate.states(<blockstate:astralsorcery:blockblackmarble:marbletype=pillar>))
+    .where("D", CTPredicate.states(<blockstate:modularmachinery:blockinputbus:size=big>))
+    .where("E", CTPredicate.states(<blockstate:modularmachinery:blockoutputbus>))
+    .where("F", CTPredicate.states(<blockstate:bloodmagic:ritual_controller:type=imperfect>))
+    .where("G", CTPredicate.states(<blockstate:astralsorcery:blockcelestialcollectorcrystal>).setNBTParser("astralsorcery.constellation.lucerna").addTooltips("Must be a Celestial Collector Crystal attuned to Lucerna"))
+    .where("@", CTPredicate.states(<blockstate:dj2:mob_loot_fabricator>).setCenter())
+    .where(" ", CTPredicate.getAny())
+    .where("-", CTPredicate.getAir())
+    .build();
 
 map.start()
     .name("abyssalcraft")

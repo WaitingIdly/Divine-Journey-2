@@ -1,21 +1,36 @@
 #loader multiblocked
 # Author: WaitingIdly
 
-import mods.multiblocked.MBDRegistry;
 import mods.multiblocked.definition.ControllerDefinition;
-import mods.multiblocked.definition.ComponentDefinition;
+import mods.multiblocked.MBDRegistry;
+import mods.multiblocked.pattern.CTPredicate;
+import mods.multiblocked.pattern.FactoryBlockPattern;
+import mods.multiblocked.pattern.RelativeDirection;
 import mods.multiblocked.recipe.RecipeMap;
-import mods.multiblocked.functions.ISetupRecipe;
-import mods.multiblocked.recipe.RecipeLogic;
-import mods.multiblocked.recipe.Recipe;
-import mods.thaumcraft.AspectStack;
-
-import crafttweaker.text.ITextComponent;
 
 print("STARTING LightningCraftInfusionMultiblock.zs");
 
 val map = RecipeMap("lightningcraft_infusion_multiblock") as RecipeMap;
 RecipeMap.register(map);
+
+val controller = MBDRegistry.getDefinition("dj2:lightningcraft_infusion_multiblock") as ControllerDefinition;
+controller.recipeMap = map;
+controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
+    .aisle("ABA","BCB", "ABA", "   ")
+    .aisle("BDB","@EF", "BAB", " G ")
+    .aisle("ABA","BHB", "ABA", "   ")
+    .where("A", CTPredicate.states(<blockstate:lightningcraft:stone_block:variant=3>))
+    .where("B", CTPredicate.states(<blockstate:modularmachinery:blockcasing>))
+    .where("C", CTPredicate.states(<blockstate:modularmachinery:blockoutputbus:size=tiny>))
+    .where("D", CTPredicate.states(<blockstate:lightningcraft:lightning_cell:variant=1>))
+    .where("E", CTPredicate.states(<blockstate:lightningcraft:lightning_infuser>))
+    .where("F", CTPredicate.states(<blockstate:modularmachinery:blockenergyinputhatch:size=huge>))
+    .where("G", CTPredicate.states(<blockstate:lightningcraft:air_terminal:variant=skyfather>))
+    .where("H", CTPredicate.states(<blockstate:modularmachinery:blockinputbus:size=big>))
+    .where("@", CTPredicate.states(<blockstate:dj2:lightningcraft_infusion_multiblock>).setCenter())
+    .where(" ", CTPredicate.getAny())
+    .where("-", CTPredicate.getAir())
+    .build();
 
 map.start()
     .name("skyfather_ingot_recipe")
@@ -87,7 +102,7 @@ map.start()
     .perTick(true).inputFE(1000).perTick(false)
     .inputItems(<lightningcraft:material:7>,
                   <thermalfoundation:material:1027> * 16,
-                  <bloodmagic:cutting_fluid:0>)
+                  <bloodmagic:cutting_fluid>)
     .outputItems(<lightningcraft:material:8> * 3)
     .build();
 
@@ -99,7 +114,7 @@ map.start()
     .inputItems(<minecraft:diamond>,
                   <minecraft:iron_ingot>,
                   <minecraft:gold_ingot>)
-    .outputItems(<lightningcraft:ingot:0>)
+    .outputItems(<lightningcraft:ingot>)
     .build();
 
 map.start()
@@ -109,7 +124,7 @@ map.start()
     .inputItems(<ore:blockDiamond>,
                   <minecraft:iron_block>,
                   <minecraft:gold_block>)
-    .outputItems(<lightningcraft:metal_block:0>)
+    .outputItems(<lightningcraft:metal_block>)
     .build();
 
 # Add weapons to Modular Machine

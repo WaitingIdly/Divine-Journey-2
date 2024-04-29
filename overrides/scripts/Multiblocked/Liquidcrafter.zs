@@ -1,21 +1,47 @@
 #loader multiblocked
 # Author: WaitingIdly
 
-import mods.multiblocked.MBDRegistry;
 import mods.multiblocked.definition.ControllerDefinition;
-import mods.multiblocked.definition.ComponentDefinition;
+import mods.multiblocked.MBDRegistry;
+import mods.multiblocked.pattern.CTPredicate;
+import mods.multiblocked.pattern.FactoryBlockPattern;
+import mods.multiblocked.pattern.RelativeDirection;
 import mods.multiblocked.recipe.RecipeMap;
-import mods.multiblocked.functions.ISetupRecipe;
-import mods.multiblocked.recipe.RecipeLogic;
-import mods.multiblocked.recipe.Recipe;
-import mods.thaumcraft.AspectStack;
-
-import crafttweaker.text.ITextComponent;
 
 print("STARTING Liquidcrafter.zs");
 
 val map = RecipeMap("liquidcrafter") as RecipeMap;
 RecipeMap.register(map);
+
+val controller = MBDRegistry.getDefinition("dj2:liquidcrafter") as ControllerDefinition;
+controller.recipeMap = map;
+controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
+    .aisle("  A ", "    ", "    ", "    ", "  A ")
+    .aisle(" BAA", "  C ", "  C ", "  C ", " AAA")
+    .aisle("  A ", "    ", "    ", "    ", "  A ")
+    .aisle(" BAA", "  C ", "  C ", "  C ", " AAA")
+    .aisle("  A ", "    ", "    ", "    ", "  A ")
+    .aisle("DAAA", " AEA", " AEA", " AEA", " AAA")
+    .aisle("AAAA", " @FG", " CFE", " CFE", " AAA")
+    .aisle("HAAA", " AEA", " AEA", " AEA", " AAA")
+    .aisle("  A ", "    ", "    ", "    ", "  A ")
+    .aisle(" IAA", "  C ", "  C ", "  C ", " AAA")
+    .aisle("  A ", "    ", "    ", "    ", "  A ")
+    .aisle(" IAA", "  C ", "  C ", "  C ", " AAA")
+    .aisle("  A ", "    ", "    ", "    ", "  A ")
+    .where("A", CTPredicate.states(<blockstate:modularmachinery:blockcasing:casing=reinforced>))
+    .where("B", CTPredicate.states(<blockstate:modularmachinery:blockfluidoutputhatch:size=big>))
+    .where("C", CTPredicate.states(<blockstate:thaumicaugmentation:fortified_glass>))
+    .where("D", CTPredicate.states(<blockstate:modularmachinery:blockoutputbus:size=big>))
+    .where("E", CTPredicate.states(<blockstate:modularmachinery:blockcasing:casing=vent>))
+    .where("F", CTPredicate.liquids(<fluid:astralsorcery.liquidstarlight>) | CTPredicate.states(<blockstate:contenttweaker:starlight>))
+    .where("G", CTPredicate.states(<blockstate:modularmachinery:blockenergyinputhatch:size=huge>))
+    .where("H", CTPredicate.states(<blockstate:modularmachinery:blockinputbus:size=big>))
+    .where("I", CTPredicate.states(<blockstate:modularmachinery:blockfluidinputhatch:size=big>))
+    .where("@", CTPredicate.states(<blockstate:dj2:liquidcrafter>).setCenter())
+    .where(" ", CTPredicate.getAny())
+    .where("-", CTPredicate.getAir())
+    .build();
 
 <contenttweaker:starlight>.addTooltip("Used to represent Liquid Starlight in a Multiblock'd Multiblock preview.");
 

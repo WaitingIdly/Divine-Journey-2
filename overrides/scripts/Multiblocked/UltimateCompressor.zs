@@ -1,21 +1,35 @@
 #loader multiblocked
 # Author: WaitingIdly
 
-import mods.multiblocked.MBDRegistry;
 import mods.multiblocked.definition.ControllerDefinition;
-import mods.multiblocked.definition.ComponentDefinition;
+import mods.multiblocked.MBDRegistry;
+import mods.multiblocked.capability.IO;
+import mods.multiblocked.pattern.CTPredicate;
+import mods.multiblocked.pattern.FactoryBlockPattern;
+import mods.multiblocked.pattern.RelativeDirection;
 import mods.multiblocked.recipe.RecipeMap;
-import mods.multiblocked.functions.ISetupRecipe;
-import mods.multiblocked.recipe.RecipeLogic;
-import mods.multiblocked.recipe.Recipe;
-import mods.thaumcraft.AspectStack;
-
-import crafttweaker.text.ITextComponent;
 
 print("STARTING UltimateCompressor.zs");
 
 val map = RecipeMap("ultimate_compressor") as RecipeMap;
 RecipeMap.register(map);
+
+val controller = MBDRegistry.getDefinition("dj2:ultimate_compressor") as ControllerDefinition;
+controller.recipeMap = map;
+controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
+    .aisle("ABA", "CAB", "ABA")
+    .aisle("@BD", "AEA", "BBB")
+    .aisle("ABA", "FAB", "ABA")
+    .where("A", CTPredicate.states(<blockstate:galacticraftcore:machine4>).disableRenderFormed())
+    .where("B", CTPredicate.states(<blockstate:modularmachinery:blockcasing:casing=reinforced>))
+    .where("C", CTPredicate.states(<blockstate:actuallyadditions:block_giant_chest>).setIO(IO.OUT))
+    .where("D", CTPredicate.states(<blockstate:modularmachinery:blockenergyinputhatch:size=ludicrous>))
+    .where("E", CTPredicate.liquids(<fluid:molten_mystic>) | CTPredicate.states(<blockstate:contenttweaker:molten_mystic>))
+    .where("F", CTPredicate.states(<blockstate:actuallyadditions:block_giant_chest>).setIO(IO.IN))
+    .where("@", CTPredicate.states(<blockstate:dj2:ultimate_compressor>).setCenter())
+    .where(" ", CTPredicate.getAny())
+    .where("-", CTPredicate.getAir())
+    .build();
 
 <contenttweaker:molten_mystic>.addTooltip("Used to represent Molten Mystic in a Multiblock'd Multiblock preview.");
 

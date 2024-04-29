@@ -1,21 +1,45 @@
 #loader multiblocked
 # Author: WaitingIdly
 
-import mods.multiblocked.MBDRegistry;
 import mods.multiblocked.definition.ControllerDefinition;
-import mods.multiblocked.definition.ComponentDefinition;
+import mods.multiblocked.MBDRegistry;
+import mods.multiblocked.pattern.CTPredicate;
+import mods.multiblocked.pattern.FactoryBlockPattern;
+import mods.multiblocked.pattern.RelativeDirection;
 import mods.multiblocked.recipe.RecipeMap;
-import mods.multiblocked.functions.ISetupRecipe;
-import mods.multiblocked.recipe.RecipeLogic;
-import mods.multiblocked.recipe.Recipe;
 import mods.thaumcraft.AspectStack;
-
-import crafttweaker.text.ITextComponent;
 
 print("STARTING AutoInfusionMatrix.zs");
 
 val map = RecipeMap("auto_infusion_matrix") as RecipeMap;
 RecipeMap.register(map);
+
+val controller = MBDRegistry.getDefinition("dj2:auto_infusion_matrix") as ControllerDefinition;
+controller.recipeMap = map;
+controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
+    .aisle("BBCBB", "BBBBB", "BDDDB", "BDDDB", "BDDDB", "BBBBB", "BBBBB")
+    .aisle("BEBEB", "BFGFB", "DHIHD", "D-J-D", "DDDDD", "BDEDB", "BDDDB")
+    .aisle("BBBBK", "@GBGB", "DILID", "DJ-JD", "DDMDD", "BEDEB", "BDIDB")
+    .aisle("BEBEB", "BFGFB", "DHIHD", "D-J-D", "DDDDD", "BDEDB", "BDDDB")
+    .aisle("BBNBB", "BBBBB", "BDDDB", "BDDDB", "BDDDB", "BBBBB", "BBBBB")
+    .where("A", CTPredicate.states(<blockstate:minecraft:stained_glass>))
+    .where("B", CTPredicate.states(<blockstate:modularmachinery:blockcasing>))
+    .where("C", CTPredicate.states(<blockstate:modularmachinery:blockoutputbus:size=small>))
+    .where("D", CTPredicate.states(<blockstate:thaumicaugmentation:fortified_glass>))
+    .where("E", CTPredicate.states(<blockstate:thaumicaugmentation:stone:ta_stone_type=ancient_light>))
+    .where("F", CTPredicate.states(<blockstate:thaumcraft:metal_alchemical_advanced>))
+    .where("G", CTPredicate.liquids(<fluid:liquid_death>) | CTPredicate.states(<blockstate:contenttweaker:liquid_death>))
+    .where("H", CTPredicate.states(<blockstate:thaumcraft:pillar_arcane>))
+    .where("I", CTPredicate.states(<blockstate:thaumicenergistics:infusion_provider>))
+    .where("J", CTPredicate.states(<blockstate:thaumcraft:stabilizer>))
+    .where("K", CTPredicate.states(<blockstate:modularmachinery:blockenergyinputhatch:size=big>))
+    .where("L", CTPredicate.states(<blockstate:thaumcraft:pedestal_arcane>))
+    .where("M", CTPredicate.states(<blockstate:thaumcraft:infusion_matrix>))
+    .where("N", CTPredicate.states(<blockstate:modularmachinery:blockinputbus:size=small>))
+    .where("@", CTPredicate.states(<blockstate:dj2:potato>).setCenter())
+    .where(" ", CTPredicate.getAny())
+    .where("-", CTPredicate.getAir())
+    .build();
 
 <contenttweaker:liquid_death>.addTooltip("Used to represent Liquid Death in a Multiblock'd Multiblock preview.");
 
