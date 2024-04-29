@@ -24,7 +24,7 @@ laser_focus.start()
     .inputItems(<mysticalagriculture:crafting:21>,
                 <mysticalagriculture:crafting:4> * 4,
                 <alchemistry:ingot:30> * 36)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:zinc_seeds>)
     .buildAndRegister();
 
@@ -37,7 +37,7 @@ laser_focus.start()
                 <minecraft:dragon_egg>,
                 <quark:enderdragon_scale>,
                 <mysticalagriculture:crafting:4> * 4)
-//    .inputMekLaser(102400000)
+    .inputLaser(102400000)
     .outputItems(<mysticalagradditions:special:1>)
     .buildAndRegister();
 
@@ -49,7 +49,7 @@ laser_focus.start()
     .inputItems(<draconicevolution:energy_crystal> * 4,
                 <draconicevolution:wyvern_energy_core> * 4,
                 <contenttweaker:condensed_vis_crystal_auram>)
-//    .inputMekLaser(2560000)
+    .inputLaser(2560000)
     .outputItems(<draconicevolution:energy_crystal:1>)
     .buildAndRegister();
 
@@ -61,7 +61,7 @@ laser_focus.start()
     .inputItems(<mysticalagriculture:crafting:21>,
                 <mysticalagriculture:crafting:4> * 4,
                 <galacticraftplanets:mars:8> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:desh_seeds>)
     .buildAndRegister();
 
@@ -73,7 +73,7 @@ laser_focus.start()
     .inputItems(<mysticalagriculture:crafting:21>,
                 <mysticalagriculture:crafting:4> * 4,
                 <astralsorcery:itemcraftingcomponent:1> * 36)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:starmetal_seeds>)
     .buildAndRegister();
 
@@ -88,7 +88,7 @@ laser_focus.start()
                 <draconicevolution:draconic_block>,
                 <extendedcrafting:singularity:24>,
                 <alchemistry:mineral_salt> * 8)
-//    .inputMekLaser(2560000)
+    .inputLaser(2560000)
     .outputItems(<contenttweaker:alchemical_machine_frame>)
     .buildAndRegister();
 
@@ -99,7 +99,7 @@ laser_focus.start()
     .perTick(true).inputFE(32000).perTick(false)
     .inputItems(<mysticalagriculture:tier4_inferium_seeds>,
                 <mysticalagriculture:crafting:4> * 8)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:tier5_inferium_seeds>)
     .buildAndRegister();
 
@@ -111,7 +111,7 @@ laser_focus.start()
     .inputItems(<thaumcraft:baubles:4>,
                 <draconicevolution:draconic_core>,
                 <draconicevolution:wyvern_energy_core>)
-//    .inputMekLaser(1280000)
+    .inputLaser(1280000)
     .outputItems(<draconicadditions:basic_shield_necklace>)
     .buildAndRegister();
 
@@ -122,7 +122,7 @@ laser_focus.start()
     .perTick(true).inputFE(32000).perTick(false)
     .inputItems(<mysticalagriculture:crafting:36>,
                 <mysticalagriculture:crafting:4> * 2)
-//    .inputMekLaser(320000)
+    .inputLaser(320000)
     .outputItems(<mysticalagriculture:crafting:37>)
     .buildAndRegister();
 
@@ -136,7 +136,7 @@ laser_focus.start()
                 <mysticalagriculture:end_seeds>,
                 <mysticalagriculture:crafting:4> * 4,
                 <enderio:block_alloy:8> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:end_steel_seeds>)
     .buildAndRegister();
 
@@ -149,7 +149,7 @@ laser_focus.start()
                 <mysticalagriculture:skeleton_seeds>,
                 <mysticalagriculture:crafting:4> * 4,
                 <mysticalagriculture:chunk:20> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:wither_skeleton_seeds>)
     .buildAndRegister();
 
@@ -162,7 +162,7 @@ laser_focus.start()
                 <mysticalagriculture:cold_iron_seeds>,
                 <mysticalagriculture:crafting:4> * 4,
                 <thaumcraft:metal_void> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:void_metal_seeds>)
     .buildAndRegister();
 
@@ -175,7 +175,7 @@ laser_focus.start()
                 <mysticalagriculture:thaumium_seeds>,
                 <mysticalagriculture:crafting:4> * 4,
                 <bewitchment:block_of_cold_iron> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:cold_iron_seeds>)
     .buildAndRegister();
 
@@ -186,7 +186,7 @@ laser_focus.start()
     .perTick(true).inputFE(32000).perTick(false)
     .inputItems(<mysticalagriculture:chunk:3>,
                 <mysticalagriculture:crafting:4> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:chunk:4>)
     .buildAndRegister();
 
@@ -196,7 +196,7 @@ laser_focus.start()
     .duration(40)
     .perTick(true).inputFE(32000).perTick(false)
     .inputItems(<draconicevolution:draconium_block>)
-//    .inputMekLaser(2560000)
+    .inputLaser(2560000)
     .outputItems(<draconicevolution:draconium_block:1>)
     .buildAndRegister();
 
@@ -208,7 +208,7 @@ laser_focus.start()
     .inputItems(<mysticalagriculture:crafting:21>,
                 <mysticalagriculture:crafting:4> * 4,
                 <bigreactors:blockyellorium> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:yellorium_seeds>)
     .buildAndRegister();
 
@@ -220,7 +220,7 @@ laser_focus.start()
     .inputItems(<mysticalagriculture:crafting:21>,
                 <mysticalagriculture:crafting:4> * 4,
                 <galacticraftplanets:asteroids_block:7> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:titanium_seeds>)
     .buildAndRegister();
 
@@ -245,7 +245,7 @@ laser_focus.start()
                 <roots:spirit_herb>,
                 <minecraft:cactus>,
                 <actuallyadditions:item_solidified_experience> * 12)
-//    .inputMekLaser(320000)
+    .inputLaser(320000)
     .outputItems(<contenttweaker:ingot_of_elevation> * 16)
     .buildAndRegister();
 
@@ -257,7 +257,7 @@ laser_focus.start()
     .inputItems(<simplyjetpacks:itemfluxpack:3>,
                 <draconicevolution:wyvern_core> * 4,
                 <draconicevolution:wyvern_energy_core> * 4)
-//    .inputMekLaser(2560000)
+    .inputLaser(2560000)
     .outputItems(<draconicevolution:draconium_capacitor>)
     .buildAndRegister();
 
@@ -270,7 +270,7 @@ laser_focus.start()
                 <mysticalagriculture:manasteel_seeds>,
                 <mysticalagriculture:crafting:4> * 4,
                 <botania:storage:1> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:terrasteel_seeds>)
     .buildAndRegister();
 
@@ -282,7 +282,7 @@ laser_focus.start()
     .inputItems(<draconicevolution:wyvern_core>,
                 <draconicevolution:wyvern_energy_core> * 2,
                 <draconicevolution:draconic_ingot> * 4)
-//    .inputMekLaser(5120000)
+    .inputLaser(5120000)
     .outputItems(<draconicevolution:draconic_energy_core>)
     .buildAndRegister();
 
@@ -293,7 +293,7 @@ laser_focus.start()
     .perTick(true).inputFE(32000).perTick(false)
     .inputItems(<mysticalagriculture:crafting:20>,
                 <mysticalagriculture:crafting:4> * 8)
-//    .inputMekLaser(51200000)
+    .inputLaser(51200000)
     .outputItems(<mysticalagriculture:crafting:21>)
     .buildAndRegister();
 
@@ -307,7 +307,7 @@ laser_focus.start()
                 <botania:manaresource:7>,
                 <botania:manaresource:4>,
                 <minecraft:glass>)
-//    .inputMekLaser(320000)
+    .inputLaser(320000)
     .outputItems(<plustic:mirioningot> * 4)
     .buildAndRegister();
 
@@ -320,7 +320,7 @@ laser_focus.start()
                 <mysticalagriculture:elementium_seeds>,
                 <mysticalagriculture:crafting:4> * 4,
                 <thaumcraft:metal_brass> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:brass_seeds>)
     .buildAndRegister();
 
@@ -330,7 +330,7 @@ laser_focus.start()
     .duration(20)
     .perTick(true).inputFE(32000).perTick(false)
     .inputItems(<contenttweaker:empty_core>)
-//    .inputMekLaser(1280000)
+    .inputLaser(1280000)
     .outputItems(<contenttweaker:plasma_core>)
     .buildAndRegister();
 
@@ -341,7 +341,7 @@ laser_focus.start()
     .perTick(true).inputFE(32000).perTick(false)
     .inputItems(<extendedcrafting:table_ultimate>,
                 <avaritia:resource:1> * 8)
-//    .inputMekLaser(2560000)
+    .inputLaser(2560000)
     .outputItems(<avaritia:extreme_crafting_table>)
     .buildAndRegister();
 
@@ -352,7 +352,7 @@ laser_focus.start()
     .perTick(true).inputFE(32000).perTick(false)
     .inputItems(<draconicevolution:particle_generator>,
                 <actuallyadditions:block_crystal_empowered:2> * 16)
-//    .inputMekLaser(2560000)
+    .inputLaser(2560000)
     .outputItems(<draconicevolution:particle_generator:2>)
     .buildAndRegister();
 
@@ -364,7 +364,7 @@ laser_focus.start()
     .inputItems(<mysticalagriculture:crafting:21>,
                 <mysticalagriculture:crafting:4> * 4,
                 <draconicevolution:draconium_block> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:draconium_seeds>)
     .buildAndRegister();
 
@@ -378,7 +378,7 @@ laser_focus.start()
                 <contenttweaker:highly_radioactive_dimension_splitting_compound> * 8,
                 <draconicadditions:chaotic_energy_core>,
                 <draconicevolution:reactor_part:4>)
-//    .inputMekLaser(2560000)
+    .inputLaser(2560000)
     .outputItems(<contenttweaker:stabilized_dimensional_machine_frame>)
     .buildAndRegister();
 
@@ -391,7 +391,7 @@ laser_focus.start()
                 <mysticalagriculture:brass_seeds>,
                 <mysticalagriculture:crafting:4> * 4,
                 <thaumcraft:metal_thaumium> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:thaumium_seeds>)
     .buildAndRegister();
 
@@ -403,7 +403,7 @@ laser_focus.start()
     .inputItems(<draconicevolution:wyvern_energy_core>,
                 <actuallyadditions:block_laser_relay_extreme>,
                 <extendedcrafting:material:24>)
-//    .inputMekLaser(1280000)
+    .inputLaser(1280000)
     .outputItems(<draconicevolution:energy_crystal>)
     .buildAndRegister();
 
@@ -414,7 +414,7 @@ laser_focus.start()
     .perTick(true).inputFE(32000).perTick(false)
     .inputItems(<draconicevolution:draconic_core>,
                 <abyssalcraft:crystalcluster:11> * 16)
-//    .inputMekLaser(1280000)
+    .inputLaser(1280000)
     .outputItems(<draconicevolution:wyvern_energy_core>)
     .buildAndRegister();
 
@@ -426,7 +426,7 @@ laser_focus.start()
     .inputItems(<matc:superiumcrystal>,
                 <mysticalagriculture:crafting:4> * 4,
                 <alchemistry:ingot:45> * 8)
-//    .inputMekLaser(102400000)
+    .inputLaser(102400000)
     .outputItems(<matc:supremiumcrystal>)
     .buildAndRegister();
 
@@ -437,7 +437,7 @@ laser_focus.start()
     .inputItems(<mysticalagriculture:crafting:21>,
                 <mysticalagriculture:crafting:4> * 4,
                 <astralsorcery:itemcraftingcomponent> * 36)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:aquamarine_seeds>)
     .buildAndRegister();
 
@@ -449,7 +449,7 @@ laser_focus.start()
                 <mysticalagriculture:crafting:4> * 4,
                 <quark:enderdragon_scale>,
                 <contenttweaker:awakened_dragon_token>)
-//    .inputMekLaser(409600000)
+    .inputLaser(409600000)
     .outputItems(<mysticalagradditions:dragon_egg_seeds>)
     .buildAndRegister();
 
@@ -463,7 +463,7 @@ laser_focus.start()
                 <mysticalagriculture:elementium_seeds>,
                 <mysticalagriculture:crafting:4> * 4,
                 <galacticraftcore:basic_block_core:12> * 4)
-//    .inputMekLaser(25600000)
+    .inputLaser(25600000)
     .outputItems(<mysticalagriculture:meteoric_iron_seeds>)
     .buildAndRegister();
 
