@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "location": "divinejourney2:liquidcrafter",
+  "location": "dj2ter",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -201,7 +201,7 @@
         "type": "states"
       },
       "controller": {
-        "location": "divinejourney2:liquidcrafter",
+        "location": "dj2ter",
         "type": "component"
       },
       "B": {

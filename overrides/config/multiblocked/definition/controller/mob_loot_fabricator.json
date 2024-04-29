@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "location": "divinejourney2:mob_loot_fabricator",
+  "location": "dj2:mob_loot_fabricator",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -113,7 +113,7 @@
         "type": "states"
       },
       "controller": {
-        "location": "divinejourney2:mob_loot_fabricator",
+        "location": "dj2:mob_loot_fabricator",
         "type": "component"
       },
       "B": {

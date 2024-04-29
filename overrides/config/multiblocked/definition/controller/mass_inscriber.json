@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "location": "divinejourney2:mass_inscriber",
+  "location": "dj2:mass_inscriber",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -91,7 +91,7 @@
         "type": "states"
       },
       "controller": {
-        "location": "divinejourney2:mass_inscriber",
+        "location": "dj2:mass_inscriber",
         "type": "component"
       },
       "B": {

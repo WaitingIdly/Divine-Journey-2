@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "location": "divinejourney2:chemical_caster",
+  "location": "dj2:chemical_caster",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -120,7 +120,7 @@
         "type": "states"
       },
       "controller": {
-        "location": "divinejourney2:chemical_caster",
+        "location": "dj2:chemical_caster",
         "type": "component"
       },
       "B": {

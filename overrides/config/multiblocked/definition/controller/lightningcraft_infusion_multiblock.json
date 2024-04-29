@@ -2,7 +2,7 @@
   "catalyst": "{id:\"minecraft:air\",Count:1b,Damage:0s}",
   "consumeCatalyst": "NOT_CONSUMED",
   "version": 2,
-  "location": "divinejourney2:lightningcraft_infusion_multiblock",
+  "location": "dj2:lightningcraft_infusion_multiblock",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -88,7 +88,7 @@
         "type": "states"
       },
       "controller": {
-        "location": "divinejourney2:lightningcraft_infusion_multiblock",
+        "location": "dj2:lightningcraft_infusion_multiblock",
         "type": "component"
       },
       "B": {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "location": "divinejourney2:ultimate_compressor",
+  "location": "dj2:ultimate_compressor",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -102,7 +102,7 @@
         "disableRenderFormed": true
       },
       "controller": {
-        "location": "divinejourney2:ultimate_compressor",
+        "location": "dj2:ultimate_compressor",
         "type": "component"
       },
       "B": {

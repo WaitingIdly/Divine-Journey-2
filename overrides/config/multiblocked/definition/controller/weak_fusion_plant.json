@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "location": "divinejourney2:weak_fusion_plant",
+  "location": "dj2:weak_fusion_plant",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -113,7 +113,7 @@
         "type": "states"
       },
       "controller": {
-        "location": "divinejourney2:weak_fusion_plant",
+        "location": "dj2:weak_fusion_plant",
         "type": "component"
       },
       "B": {

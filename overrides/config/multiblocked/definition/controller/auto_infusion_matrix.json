@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "location": "divinejourney2:auto_infusion_matrix",
+  "location": "dj2:auto_infusion_matrix",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -120,7 +120,7 @@
         "type": "states"
       },
       "controller": {
-        "location": "divinejourney2:auto_infusion_matrix",
+        "location": "dj2:auto_infusion_matrix",
         "type": "component"
       },
       "B": {

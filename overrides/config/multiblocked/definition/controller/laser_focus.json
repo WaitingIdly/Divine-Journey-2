@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "location": "divinejourney2:laser_focus",
+  "location": "dj2:laser_focus",
   "traits": {},
   "properties": {
     "rotationState": "ALL",
@@ -133,7 +133,7 @@
         "type": "states"
       },
       "controller": {
-        "location": "divinejourney2:laser_focus",
+        "location": "dj2:laser_focus",
         "type": "component"
       },
       "B": {
