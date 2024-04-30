@@ -33,8 +33,5 @@
       "parent": "working"
     }
   },
-  "recipeMap": "weak_fusion_plant",
-  "catalyst": "{id:\"minecraft:air\",Count:2,Damage:0s}",
-  "consumeCatalyst": "NOT_CONSUMED",
-  "noNeedController": false
+  "catalyst": "{id:\"minecraft:air\",Count:2,Damage:0s}"
 }

@@ -1,6 +1,4 @@
 {
-  "catalyst": "{id:\"minecraft:air\",Count:1b,Damage:0s}",
-  "consumeCatalyst": "NOT_CONSUMED",
   "version": 2,
   "location": "dj2:lightningcraft_infusion_multiblock",
   "traits": {},
@@ -35,5 +33,5 @@
       "parent": "working"
     }
   },
-  "noNeedController": false
+  "catalyst": "{id:\"minecraft:air\",Count:2,Damage:0s}"
 }

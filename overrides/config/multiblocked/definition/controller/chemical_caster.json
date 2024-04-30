@@ -32,5 +32,6 @@
     "suspend": {
       "parent": "working"
     }
-  }
+  },
+  "catalyst": "{id:\"minecraft:air\",Count:2,Damage:0s}"
 }
