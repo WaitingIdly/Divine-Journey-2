@@ -20,7 +20,7 @@ controller.basePattern = FactoryBlockPattern.start(RelativeDirection.RIGHT, Rela
     .aisle("ABBBA", "BEAEB", "NAAAC", "BEAEB", "ABKBA")
     .aisle(" A@A ", "AFGFA", "BGAGB", "AFGFA", " ABA ") // controller is in the front middle of the second layer
     .aisle("ADDDA", "DHIHD", "DILID", "DHIHD", "ADDDA")
-    .aisle("BDDDB", "D J D", "DJ JD", "D J D", "BDDDB")
+    .aisle("BDDDB", "D-J-D", "DJ-JD", "D-J-D", "BDDDB")
     .aisle("ADDDA", "DDDDD", "DDMDD", "DDDDD", "ADDDA")
     .aisle(" ABA ", "ABBBA", "BBBBB", "ABBBA", " ABA ")
     .aisle("ABBBA", "BEAEB", "BA AB", "BEAEB", "ABBBA")
