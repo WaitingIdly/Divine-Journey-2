@@ -20,7 +20,7 @@ controller.basePattern = FactoryBlockPattern.start(RelativeDirection.RIGHT, Rela
     .aisle("C   C", "     ", "     ", "     ", "C   C")
     .aisle("C   C", "     ", "     ", "     ", "C   C")
     .aisle("C   C", "     ", "  F  ", "     ", "C   C")
-    .aisle("AB@BA", "BBDBB", "BBBBB", "BBEBB", "ABBBA")
+    .aisle("AB@BA", "BBDBB", "BBBBB", "BBEBB", "ABBBA") // controller is in the front middle of the first layer
     .where("A", CTPredicate.states(<blockstate:astralsorcery:blockblackmarble:marbletype=chiseled>))
     .where("B", CTPredicate.states(<blockstate:astralsorcery:blockblackmarble:marbletype=arch>))
     .where("C", CTPredicate.states(<blockstate:astralsorcery:blockblackmarble:marbletype=pillar>))

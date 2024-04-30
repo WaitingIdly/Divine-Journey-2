@@ -18,7 +18,7 @@ val controller = MBDRegistry.getDefinition("dj2:auto_infusion_matrix") as Contro
 controller.recipeMap = map;
 controller.basePattern = FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
     .aisle("ABBBA", "BEAEB", "NAAAC", "BEAEB", "ABKBA")
-    .aisle(" A@A ", "AFGFA", "BGAGB", "AFGFA", " ABA ")
+    .aisle(" A@A ", "AFGFA", "BGAGB", "AFGFA", " ABA ") // controller is in the front middle of the second layer
     .aisle("ADDDA", "DHIHD", "DILID", "DHIHD", "ADDDA")
     .aisle("BDDDB", "D J D", "DJ JD", "D J D", "BDDDB")
     .aisle("ADDDA", "DDDDD", "DDMDD", "DDDDD", "ADDDA")

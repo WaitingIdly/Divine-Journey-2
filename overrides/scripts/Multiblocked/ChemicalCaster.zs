@@ -18,7 +18,7 @@ controller.recipeMap = map;
 controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
     .aisle("  A  ", "  B  ", "  B  ", "  B  ", "  C  ", "     ", "     ")
     .aisle(" DED ", " FGF ", " FGF ", " FGF ", " F F ", "  D  ", "     ")
-    .aisle("@EHEI", "BGJGB", "BGKGB", "BGJGB", "C L C", " DLD ", "  D  ")
+    .aisle("@EHEI", "BGJGB", "BGKGB", "BGJGB", "C L C", " DLD ", "  D  ") // controller is in the front middle of the first layer
     .aisle(" DED ", " FGF ", " FGF ", " FGF ", " F F ", "  D  ", "     ")
     .aisle("  M  ", "  B  ", "  B  ", "  B  ", "  C  ", "     ", "     ")
     .where("A", CTPredicate.states(<blockstate:modularmachinery:blockoutputbus:size=normal>))

@@ -18,7 +18,7 @@ val controller = MBDRegistry.getDefinition("dj2:ultimate_compressor") as Control
 controller.recipeMap = map;
 controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
     .aisle("ABA", "CAB", "ABA")
-    .aisle("@BD", "AEA", "BBB")
+    .aisle("@BD", "AEA", "BBB") // controller is in the front middle of the first layer
     .aisle("ABA", "FAB", "ABA")
     .where("A", CTPredicate.states(<blockstate:galacticraftcore:machine4>).disableRenderFormed())
     .where("B", CTPredicate.states(<blockstate:modularmachinery:blockcasing:casing=reinforced>))

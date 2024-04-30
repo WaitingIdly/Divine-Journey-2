@@ -17,7 +17,7 @@ val controller = MBDRegistry.getDefinition("dj2:lightningcraft_infusion_multiblo
 controller.recipeMap = map;
 controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
     .aisle("ABA","BCB", "ABA", "   ")
-    .aisle("BDB","@EF", "BAB", " G ")
+    .aisle("BDB","@EF", "BAB", " G ") // controller is in the front middle of the second layer
     .aisle("ABA","BHB", "ABA", "   ")
     .where("A", CTPredicate.states(<blockstate:lightningcraft:stone_block:variant=3>))
     .where("B", CTPredicate.states(<blockstate:modularmachinery:blockcasing>))

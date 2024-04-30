@@ -22,7 +22,7 @@ controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, Relat
     .aisle(" BAA", "  C ", "  C ", "  C ", " AAA")
     .aisle("  A ", "    ", "    ", "    ", "  A ")
     .aisle("DAAA", " AEA", " AEA", " AEA", " AAA")
-    .aisle("AAAA", " @FG", " CFE", " CFE", " AAA")
+    .aisle("AAAA", " @FG", " CFE", " CFE", " AAA") // controller is inset by one from the front in the middle of the second layer
     .aisle("HAAA", " AEA", " AEA", " AEA", " AAA")
     .aisle("  A ", "    ", "    ", "    ", "  A ")
     .aisle(" IAA", "  C ", "  C ", "  C ", " AAA")

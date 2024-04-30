@@ -20,7 +20,7 @@ controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, Relat
     .aisle("  A   A  ", "         ", "   EEE   ", "         ", "   EEE   ", "         ", "   EEE   ", "         ", "  A   A  ")
     .aisle(" A     A ", "         ", "  E   E  ", "         ", "  E   E  ", "         ", "  E   E  ", "         ", " A     A ")
     .aisle("A  AFA  A", "C  FDF  C", "CE FDF EC", "C  FDF  C", "CE FDF EC", "C  FDF  C", "CE FDF EC", "C  FDF  C", "A  AFA  A")
-    .aisle("@  FGF  H", "D  DID  D", "DE DID ED", "D  DID  D", "DE DID ED", "D  DID  D", "DE DID ED", "D  DID  D", "A  FGF  A")
+    .aisle("@  FGF  H", "D  DID  D", "DE DID ED", "D  DID  D", "DE DID ED", "D  DID  D", "DE DID ED", "D  DID  D", "A  FGF  A") // controller is in the front middle of the first layer
     .aisle("A  AFA  A", "C  FDF  C", "CE FDF EC", "C  FDF  C", "CE FDF EC", "C  FDF  C", "CE FDF EC", "C  FDF  C", "A  AFA  A")
     .aisle(" A     A ", "         ", "  E   E  ", "         ", "  E   E  ", "         ", "  E   E  ", "         ", " A     A ")
     .aisle("  A   A  ", "         ", "   EEE   ", "         ", "   EEE   ", "         ", "   EEE   ", "         ", "  A   A  ")

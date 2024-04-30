@@ -17,7 +17,7 @@ val controller = MBDRegistry.getDefinition("dj2:mass_inscriber") as ControllerDe
 controller.recipeMap = map;
 controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
     .aisle(" A ", " B ", " B ", " B ", " C ")
-    .aisle("@DE", "BFB", "BFB", "BFB", "CDC")
+    .aisle("@DE", "BFB", "BFB", "BFB", "CDC") // controller is in the front middle of the first layer
     .aisle(" G ", " B ", " B ", " B ", " C ")
     .where("A", CTPredicate.states(<blockstate:modularmachinery:blockoutputbus:size=normal>))
     .where("B", CTPredicate.states(<blockstate:contenttweaker:reinforced_glass_casing>))
