@@ -16,12 +16,14 @@ RecipeMap.register(map);
 
 val controller = MBDRegistry.getDefinition("dj2:auto_infusion_matrix") as ControllerDefinition;
 controller.recipeMap = map;
-controller.basePattern = FactoryBlockPattern.start(RelativeDirection.BACK, RelativeDirection.UP, RelativeDirection.RIGHT)
-    .aisle("BBCBB", "BBBBB", "BDDDB", "BDDDB", "BDDDB", "BBBBB", "BBBBB")
-    .aisle("BEBEB", "BFGFB", "DHIHD", "D-J-D", "DDDDD", "BDEDB", "BDDDB")
-    .aisle("BBBBK", "@GBGB", "DILID", "DJ-JD", "DDMDD", "BEDEB", "BDIDB")
-    .aisle("BEBEB", "BFGFB", "DHIHD", "D-J-D", "DDDDD", "BDEDB", "BDDDB")
-    .aisle("BBNBB", "BBBBB", "BDDDB", "BDDDB", "BDDDB", "BBBBB", "BBBBB")
+controller.basePattern = FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
+    .aisle("ABBBA", "BEAEB", "NAAAC", "BEAEB", "ABKBA")
+    .aisle(" A@A ", "AFGFA", "BGAGB", "AFGFA", " ABA ")
+    .aisle("ADDDA", "DHIHD", "DILID", "DHIHD", "ADDDA")
+    .aisle("BDDDB", "D J D", "DJ JD", "D J D", "BDDDB")
+    .aisle("ADDDA", "DDDDD", "DDMDD", "DDDDD", "ADDDA")
+    .aisle(" ABA ", "ABBBA", "BBBBB", "ABBBA", " ABA ")
+    .aisle("ABBBA", "BEAEB", "BA AB", "BEAEB", "ABBBA")
     .where("A", CTPredicate.states(<blockstate:minecraft:stained_glass>))
     .where("B", CTPredicate.states(<blockstate:modularmachinery:blockcasing>))
     .where("C", CTPredicate.states(<blockstate:modularmachinery:blockoutputbus:size=small>))
