@@ -10,6 +10,15 @@ on:
       - main
     paths:
       # we only care to make a new nightly release if it impacts the game.
+      - ".github/workflows/nightly.yml"
+      - "overrides/**"
+      - "serverfiles/**"
+      - "manifest.json"
+
+  pull_request:
+    paths:
+      # we only care to make a new nightly release if it impacts the game.
+      - ".github/workflows/nightly.yml"
       - "overrides/**"
       - "serverfiles/**"
       - "manifest.json"
@@ -18,9 +27,11 @@ on:
     # Runs on the first of every 3rd month, which should ensure the nightly never goes down due to artifact timeout.
     - cron: "0 0 1 */3 *"
 
+  workflow_dispatch:
+
 # Cancel any ongoing instances of this workflow
 concurrency:
-  group: nightly
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
