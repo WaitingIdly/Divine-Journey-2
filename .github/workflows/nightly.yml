@@ -62,6 +62,11 @@ jobs:
           fetch-tags: true
           persist-credentials: false
 
+      - name: "Get all tags"
+        # This is required because 'actions/checkout@v4' only fetches the current version,
+        # and we need to get all tags to determine the currently active major version
+        run: git fetch --prune --unshallow --tags --force
+
       - name: "Setup Python"
         uses: actions/setup-python@v5
         with:
