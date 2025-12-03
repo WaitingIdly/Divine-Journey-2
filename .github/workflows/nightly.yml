@@ -33,9 +33,11 @@ jobs:
       # Ensure that the secret(s) required to run the workflow exist
       - name: "Check for Secret presence"
         id: secret-check
+        env:
+          RUN: "${{ secrets.CFAPIKEY }}"
         shell: bash
         run: |
-          if [ "${{ secrets.CFAPIKEY }}" == "" ]; then
+          if [ "$RUN" == "" ]; then
             echo "Unable to access secrets required to run workflow" >> $GITHUB_STEP_SUMMARY
             exit 1
           fi
@@ -45,7 +47,9 @@ jobs:
       - name: "Checkout Repo"
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.ref }}
           fetch-tags: true
+          persist-credentials: false
 
       - name: "Setup Python"
         uses: actions/setup-python@v5
@@ -58,7 +62,9 @@ jobs:
       # Create prerelease zip files for the Client and Server after downloading the required mods
       - name: "Build everything"
         id: build
-        run: python ./buildtools/build.py -CSDPZ --key='${{ secrets.CFAPIKEY }}'
+        env:
+          KEY: ${{ secrets.CFAPIKEY }}
+        run: python ./buildtools/build.py -CSDPZ --key='$KEY'
         # Will output client_name and server_name
 
       # Upload build artifacts to Github Actions
@@ -98,13 +104,18 @@ jobs:
       - name: "Generate report"
         id: generate-report
         shell: bash
+        env:
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+          CLIENT: ${{ steps.build.outputs.client_name }}
+          SERVER: ${{ steps.build.outputs.server_name }}
         run: |
-          echo "[Changelog](https://github.com/${{ github.repository }}/blob/${{ github.sha }}/changelog/LATEST.md)" >> $GITHUB_STEP_SUMMARY
-          if [ "${{ steps.build.outputs.client_name }}" != '' ]; then
-            echo "Uploaded the client zip file with the name `${{ steps.build.outputs.client_name }}.zip`" >> $GITHUB_STEP_SUMMARY
+          echo "[Changelog](https://github.com/$REPO/blob/$SHA/changelog/LATEST.md)" >> $GITHUB_STEP_SUMMARY
+          if [ "$CLIENT" != '' ]; then
+            echo "Uploaded the client zip file with the name $CLIENT" >> $GITHUB_STEP_SUMMARY
           fi
-          if [ "${{ steps.build.outputs.server_name }}" != '' ]; then
-            echo "Uploaded the server zip file with the name `${{ steps.build.outputs.server_name }}.zip`" >> $GITHUB_STEP_SUMMARY
+          if [ "$SERVER" != '' ]; then
+            echo "Uploaded the server zip file with the name $SERVER" >> $GITHUB_STEP_SUMMARY
           fi
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Download via [Nightly](https://nightly.link/${{ github.repository }}/workflows/nightly/main)" >> $GITHUB_STEP_SUMMARY
+          echo "Download via [Nightly](https://nightly.link/$REPO/workflows/nightly/main)" >> $GITHUB_STEP_SUMMARY
