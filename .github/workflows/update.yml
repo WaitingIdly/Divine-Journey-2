@@ -1,0 +1,64 @@
+name: Update and Release
+
+# See ./reusable-release.yml for required secrets
+
+on:
+  workflow_dispatch:
+    inputs:
+      release-type:
+        description: "If the version is a major update or a minor update"
+        required: true
+        type: choice
+        options:
+          - major
+          - minor
+
+# Cancel any ongoing instances of this workflow
+concurrency:
+  group: update
+  cancel-in-progress: true
+
+jobs:
+  get-version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.next-version.outputs.version }}
+    steps:
+      - name: "Get all tags"
+        # Fetch just the tags
+        run: git fetch --prune --unshallow --tags --force
+
+      - name: "Get version number"
+        id: next-version
+        shell: bash
+        env:
+          IS_MAJOR: ${{ inputs.release-type == 'major' }}
+        run: |
+          old=`git describe --abbrev=0 --tags`
+          IFS=. read -r unchanging major minor <<< "$old"
+
+          # Specify base 10 in case of leading zeroes (octal)
+          ((major=10#$major, minor=10#$minor))
+
+          if [[ $IS_MAJOR == 'true' ]]; then
+            ((major++, minor=0))
+          else
+            ((minor++))
+          fi
+
+          new="$unchanging.$major.$minor"
+
+          if [[ $old == $new ]]; then
+            echo "failed to update the version number $old" && exit 1
+          fi
+
+          echo "version=$new" >> "$GITHUB_OUTPUT"
+
+  call-workflow:
+    needs: get-version
+    uses: ./.github/workflows/reusable-release.yml@main
+    with:
+      version: ${{ needs.get-version.outputs.version }}
+      update-version: "true"
+      release-type: ${{ inputs.release-type }}
+    secrets: inherit
