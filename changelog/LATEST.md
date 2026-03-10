@@ -22,6 +22,7 @@ View all [changelogs](https://github.com/Divine-Journey-2/Divine-Journey-2/tree/
 ## Text and Quest Updates:
 
 - Fix a typo in the Totemic book for the Rite of Spring.
+- Rename Storage Drawer Slave to Controller Access Point to better communicate its purpose.
 
 ## Texture Transformations:
 
