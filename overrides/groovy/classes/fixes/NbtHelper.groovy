@@ -21,7 +21,7 @@ class NbtHelper {
 
     /// remove any number of tags from a single nbt compound
     static void removeTags(NBTTagCompound compound, String... removal) {
-        compound.with { removal.each { removeTag(it) } }
+        removal.each { it -> compound.removeTag(it) }
     }
 
     /// generate a default itemstack representation
@@ -38,18 +38,18 @@ class NbtHelper {
     /// which can be right-clicked to extract all contained stacks.
     /// useful for when a single itemstack being removed is effectively 2 itemstacks
     static NBTTagCompound clusterStacks(List<NBTTagCompound> stacks) {
-        itemStackRep('avaritia:matter_cluster', 1, 0, nbt().tap {
-            setTag('clusteritems', nbt().tap {
-                setInteger('total', stacks.size())
-                setTag('items', new NBTTagList().tap {
-                    stacks.each { e ->
-                        appendTag(nbt().tap {
-                            setInteger('count', 1)
-                            setTag('item', e)
-                        })
-                    }
-                })
-            })
-        })
+        def tag = nbt()
+        def cluster = nbt()
+        def items = new NBTTagList()
+        stacks.each { e ->
+            def entry = nbt()
+            entry.setInteger('count', 1)
+            entry.setTag('item', e)
+            items.appendTag(entry)
+        }
+        cluster.setInteger('total', stacks.size())
+        cluster.setTag('items', items)
+        tag.setTag('clusteritems', cluster)
+        itemStackRep('avaritia:matter_cluster', 1, 0, tag)
     }
 }
