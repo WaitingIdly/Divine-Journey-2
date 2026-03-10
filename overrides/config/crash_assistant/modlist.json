@@ -4,12 +4,12 @@
     "modId": "forge",
     "version": "forge-1.12.2-14.23.5.2860-universal.jar"
   },
-  "!!!CrashAssistant-forge-1.12.2-1.10.30.jar": {
-    "jarName": "!!!CrashAssistant-forge-1.12.2-1.10.30.jar",
+  "!!!CrashAssistant-forge-1.12.2-1.11.0.jar": {
+    "jarName": "!!!CrashAssistant-forge-1.12.2-1.11.0.jar",
     "modId": "crash_assistant",
-    "version": "1.10.30",
-    "curseForgeHash": 3581089756,
-    "modrinthHash": "cc73299793b9f2f2418cb2b9a2912da4ce0b326a"
+    "version": "1.11.0",
+    "curseForgeHash": 974601628,
+    "modrinthHash": "885196455e5421b692937ecaf0506b05d6aea098"
   },
   "!configanytime-3.0.jar": {
     "jarName": "!configanytime-3.0.jar",
@@ -579,12 +579,12 @@
     "curseForgeHash": 3947634407,
     "modrinthHash": "d3b4d15cebe24c822556de2c77e348f20afeb064"
   },
-  "Forgelin-Continuous-2.3.0.0.jar": {
-    "jarName": "Forgelin-Continuous-2.3.0.0.jar",
+  "Forgelin-Continuous-2.3.10.0.jar": {
+    "jarName": "Forgelin-Continuous-2.3.10.0.jar",
     "modId": "forgelin_continuous",
-    "version": "2.1.0.0",
-    "curseForgeHash": 105582749,
-    "modrinthHash": "050d2913bb9e572d9bbb7f39c147bd9129e16c68"
+    "version": "2.3.10.0",
+    "curseForgeHash": 845864044,
+    "modrinthHash": "705ec14d492d72235bc331970f143d710d97e0cc"
   },
   "ForgeMultipart-1.12.2-2.6.2.83-universal.jar": {
     "jarName": "ForgeMultipart-1.12.2-2.6.2.83-universal.jar",

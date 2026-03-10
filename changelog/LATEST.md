@@ -4,6 +4,8 @@ View all [changelogs](https://github.com/Divine-Journey-2/Divine-Journey-2/tree/
 ## Mod Modifications:
 
 - Update Bubbles 2.4.9 -> 2.4.10
+- Update Crash Assistant 1.10.30 -> 1.11.0
+- Update Forgelin-Continuous 2.3.0.0 -> 2.3.10.0
 
 ## Bugfixes:
 
