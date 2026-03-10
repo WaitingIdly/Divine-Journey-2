@@ -9,12 +9,14 @@ View all [changelogs](https://github.com/Divine-Journey-2/Divine-Journey-2/tree/
 
 - Fix Baubles not syncing properly on servers, causing inventory desyncs (Bubbles).
 - Fix Roots Baubles not being correctly located (Bubbles).
+- Fix Underground Biomes Mossy Stones not being able to be scaped by Roots knives.
 
 ## Balance Adjustments:
 
 
 ## QoL Improvements:
 
+- Add more variants of Mossy stones to the Roots system.
 
 ## Text and Quest Updates:
 
