@@ -5,7 +5,7 @@ import net.minecraft.util.datafix.IFixableData
 class MysticalAgricultureTieredCrystals implements IFixableData {
 
     /// all items this affects
-    public static def ALL_ITEMS = ['matc:inferiumcrystal', 'matc:prudentiumcrystal', 'matc:intermediumcrystal', 'matc:superiumcrystal', 'matc:supremiumcrystal']
+    public static final def ALL_ITEMS = ['matc:inferiumcrystal', 'matc:prudentiumcrystal', 'matc:intermediumcrystal', 'matc:superiumcrystal', 'matc:supremiumcrystal']
 
     int getFixVersion() {
         Fixer.VERSION23_0

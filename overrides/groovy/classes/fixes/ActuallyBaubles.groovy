@@ -4,7 +4,7 @@ import net.minecraft.util.datafix.IFixableData
 
 class ActuallyBaubles implements IFixableData {
 
-    public static def CONVERSION_MAP = [
+    public static final def CONVERSION_MAP = [
         'actuallyadditions:potion_ring_advanced_bauble': 'actuallyadditions:item_potion_ring_advanced',
         'actuallyadditions:magnet_ring_bauble': 'actuallyadditions:item_suction_ring',
         'actuallyadditions:battery_bauble': 'actuallyadditions:item_battery',

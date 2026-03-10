@@ -4,12 +4,12 @@ import net.minecraft.util.datafix.IFixableData
 
 class OmniwandConversion implements IFixableData {
 
-    private static def MORPHTOOL = 'morphtool:tool'
-    private static def OMNIWAND = 'omniwand:wand'
-    private static def MORPH_DATA = 'morphtool:data'
-    private static def OMNI_DATA = 'omniwand:data'
+    private static final def MORPHTOOL = 'morphtool:tool'
+    private static final def OMNIWAND = 'omniwand:wand'
+    private static final def MORPH_DATA = 'morphtool:data'
+    private static final def OMNI_DATA = 'omniwand:data'
 
-    public static def ALL_ITEMS = [MORPHTOOL]
+    public static final def ALL_ITEMS = [MORPHTOOL]
 
     int getFixVersion() {
         Fixer.VERSION23_0

@@ -5,20 +5,20 @@ import net.minecraft.util.datafix.IFixableData
 class WirelessAE2Terminal implements IFixableData {
 
     // DJ2 only has crafting, fluid, and ultimate terminals by default, not interface or pattern
-    private static def CRAFTING_TERMINALS = ['wct:wct', 'wct:wct_creative']
-    private static def FLUID_TERMINALS = ['wft:wft', 'wft:wft_creative']
-    private static def INTERFACE_TERMINALS = ['wit:wit', 'wit:wit_creative']
-    private static def PATTERN_TERMINALS = ['wpt:wpt', 'wpt:wpt_creative']
-    private static def UNIVERSAL_TERMINALS = ['ae2wtlib:wut', 'ae2wtlib:wut_creative']
-    private static def INFINITY_BOOSTER_CARD = 'ae2wtlib:infinity_booster_card'
-    private static def MAGNET_CARD = 'wct:magnet_card'
+    private static final def CRAFTING_TERMINALS = ['wct:wct', 'wct:wct_creative']
+    private static final def FLUID_TERMINALS = ['wft:wft', 'wft:wft_creative']
+    private static final def INTERFACE_TERMINALS = ['wit:wit', 'wit:wit_creative']
+    private static final def PATTERN_TERMINALS = ['wpt:wpt', 'wpt:wpt_creative']
+    private static final def UNIVERSAL_TERMINALS = ['ae2wtlib:wut', 'ae2wtlib:wut_creative']
+    private static final def INFINITY_BOOSTER_CARD = 'ae2wtlib:infinity_booster_card'
+    private static final def MAGNET_CARD = 'wct:magnet_card'
 
-    private static def CREATIVE_TERMINALS = ['wct:wct_creative', 'wft:wft_creative', 'wit:wit_creative', 'wpt:wpt_creative', 'ae2wtlib:wut_creative']
+    private static final def CREATIVE_TERMINALS = ['wct:wct_creative', 'wft:wft_creative', 'wit:wit_creative', 'wpt:wpt_creative', 'ae2wtlib:wut_creative']
 
-    public static def ALL_ITEMS = [*CRAFTING_TERMINALS, *FLUID_TERMINALS, *INTERFACE_TERMINALS, *PATTERN_TERMINALS, *UNIVERSAL_TERMINALS, INFINITY_BOOSTER_CARD, MAGNET_CARD]
+    public static final def ALL_ITEMS = [*CRAFTING_TERMINALS, *FLUID_TERMINALS, *INTERFACE_TERMINALS, *PATTERN_TERMINALS, *UNIVERSAL_TERMINALS, INFINITY_BOOSTER_CARD, MAGNET_CARD]
 
-    private static def FIXED_BOOSTER_CARD = NbtHelper.itemStackRep('appliedenergistics2:material', 1, 59)
-    private static def FIXED_MAGNET_CARD = NbtHelper.itemStackRep('appliedenergistics2:material', 1, 60)
+    private static final def FIXED_BOOSTER_CARD = NbtHelper.itemStackRep('appliedenergistics2:material', 1, 59)
+    private static final def FIXED_MAGNET_CARD = NbtHelper.itemStackRep('appliedenergistics2:material', 1, 60)
 
     int getFixVersion() {
         Fixer.VERSION23_0
