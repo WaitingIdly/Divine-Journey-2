@@ -4,12 +4,12 @@ import net.minecraft.util.datafix.IFixableData
 
 class OmniwandConversion implements IFixableData {
 
-    private static def MORPHTOOL = 'morphtool:tool'
-    private static def OMNIWAND = 'omniwand:wand'
-    private static def MORPH_DATA = 'morphtool:data'
-    private static def OMNI_DATA = 'omniwand:data'
+    private static final def MORPHTOOL = 'morphtool:tool'
+    private static final def OMNIWAND = 'omniwand:wand'
+    private static final def MORPH_DATA = 'morphtool:data'
+    private static final def OMNI_DATA = 'omniwand:data'
 
-    public static def ALL_ITEMS = [MORPHTOOL]
+    public static final def ALL_ITEMS = [MORPHTOOL]
 
     int getFixVersion() {
         Fixer.VERSION23_0
@@ -24,26 +24,30 @@ class OmniwandConversion implements IFixableData {
         }
     }
 
+    static void cleanMorphData(NBTTagCompound data) {
+        data.getKeySet().each { removeMorphToolData(data.getTag(it)) }
+    }
+
     NBTTagCompound fixTagCompound(NBTTagCompound compound) {
         if (compound.hasKey('id', NbtHelper.STRING)) {
             def id = compound.getString('id')
             if (id == MORPHTOOL) {
                 // turn morphing tools into omniwands, fix nbt issues
                 compound.setString('id', OMNIWAND)
-                compound.setTag('tag', nbt().tap {
-                    if (compound.hasKey('tag', NbtHelper.COMPOUND) && compound.getCompoundTag('tag').hasKey(MORPH_DATA, NbtHelper.COMPOUND)) {
-                        def data = compound.getCompoundTag('tag').getCompoundTag(MORPH_DATA)
-                        // this is the data for the items
-                        data.getKeySet().each { removeMorphToolData data.getTag(it) }
-                        setTag(OMNI_DATA, data)
-                    }
-                    setBoolean('omniwand:auto', true)
-                })
+                def morphTag = nbt()
+                if (compound.hasKey('tag', NbtHelper.COMPOUND) && compound.getCompoundTag('tag').hasKey(MORPH_DATA, NbtHelper.COMPOUND)) {
+                    def data = compound.getCompoundTag('tag').getCompoundTag(MORPH_DATA)
+                    // this is the data for the items
+                    cleanMorphData(data)
+                    morphTag.setTag(OMNI_DATA, data)
+                }
+                morphTag.setBoolean('omniwand:auto', true)
+                compound.setTag('tag', morphTag)
             } else if (id == OMNIWAND) {
                 // fix nbt for omniwands that have already been converted
                 if (compound.hasKey('tag', NbtHelper.COMPOUND) && compound.getCompoundTag('tag').hasKey(OMNI_DATA, NbtHelper.COMPOUND)) {
                     def data = compound.getCompoundTag('tag').getCompoundTag(OMNI_DATA)
-                    data.getKeySet().each { removeMorphToolData data.getTag(it) }
+                    cleanMorphData(data)
                 }
             }
         }
