@@ -70,14 +70,9 @@ jobs:
 
       # Setup the repo, download all tags, download Python, and install the requests library
       - name: "Checkout Repo"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           persist-credentials: false
-
-      - name: "Get all tags"
-        # This is required because 'actions/checkout@v4' only fetches the current version,
-        # and we need to get all tags to determine the prior version
-        run: git fetch --prune --unshallow --tags --force
 
       - name: "Setup Python"
         uses: actions/setup-python@v5
