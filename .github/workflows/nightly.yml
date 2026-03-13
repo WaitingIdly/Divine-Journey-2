@@ -93,28 +93,20 @@ jobs:
           if-no-files-found: warn
 
       - name: "Upload Client artifact"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: ${{ steps.build.outputs.client_name }}
         with:
-          name: "${{ steps.build.outputs.client_name }}"
           path: "build/output/${{ steps.build.outputs.client_name }}.zip"
           if-no-files-found: warn
-          # We upload the zip file with compression 0 because
-          # - uploading the file path takes significantly longer (minutes instead of seconds)
-          # - its already a zip file, compressing it further isn't helpful and takes longer
-          compression-level: 0
+          archive: false
 
       - name: "Upload Server artifact"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: ${{ steps.build.outputs.server_name }}
         with:
-          name: "${{ steps.build.outputs.server_name }}"
           path: "build/output/${{ steps.build.outputs.server_name }}.zip"
           if-no-files-found: warn
-          # We upload the zip file with compression 0 because
-          # - uploading the file path takes significantly longer (minutes instead of seconds)
-          # - its already a zip file, compressing it further isn't helpful and takes longer
-          compression-level: 0
+          archive: false
 
       # Generate a report for what actions were taken,
       - name: "Generate report"
