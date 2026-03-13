@@ -1,13 +1,11 @@
-name: Nightly Builds
+name: Test Pull Request
 
 # Required secrets:
 # GITHUB_TOKEN - access the repo to cancel prior ongoing builds (included by default)
 # CFAPIKEY - access token to download mods
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
     paths:
       # we only care to make a new nightly release if it impacts the game.
       - ".github/workflows/nightly.yml"
@@ -15,15 +13,9 @@ on:
       - "serverfiles/**"
       - "manifest.json"
 
-  schedule:
-    # Runs on the first of every 3rd month, which should ensure the nightly never goes down due to artifact timeout.
-    - cron: "0 0 1 */3 *"
-
-  workflow_dispatch:
-
 # Cancel any ongoing instances of this workflow
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
