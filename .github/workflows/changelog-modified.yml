@@ -1,0 +1,25 @@
+name: Check Changelog Modified
+
+on:
+  pull_request: # Always check if the changelog was modified
+
+# Cancel any ongoing instances of this workflow
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 2
+
+      - name: Check LATEST.md Modified
+        run: git diff --name-only -r HEAD^1 HEAD | grep changelog/LATEST.md
