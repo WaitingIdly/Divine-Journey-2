@@ -60,5 +60,5 @@ jobs:
     with:
       version: ${{ needs.get-version.outputs.version }}
       update-version: "true"
-      release-type: ${{ inputs.release-type }}
+      release-type: "release"
     secrets: inherit
