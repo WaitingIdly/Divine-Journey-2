@@ -105,4 +105,4 @@ jobs:
             echo "Uploaded the server zip file with the name $SERVER" >> $GITHUB_STEP_SUMMARY
           fi
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Download via [Nightly](https://nightly.link/$REPO/workflows/nightly/main)" >> $GITHUB_STEP_SUMMARY
+          echo "Download via [Nightly](https://nightly.link/$REPO/workflows/test-pr/main)" >> $GITHUB_STEP_SUMMARY
