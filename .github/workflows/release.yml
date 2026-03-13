@@ -30,7 +30,10 @@ concurrency:
 
 jobs:
   call-workflow:
-    uses: ./.github/workflows/reusable-release.yml@main
+    permissions:
+      contents: write # give the token the ability to write commits and releases to the repo
+
+    uses: Divine-Journey-2/Divine-Journey-2/.github/workflows/reusable-release.yml@main
     with:
       version: ${{ inputs.version }}
       update-version: ${{ inputs.update-version }}

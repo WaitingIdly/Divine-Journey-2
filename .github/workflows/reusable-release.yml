@@ -23,7 +23,7 @@ on:
 
 # Cancel any ongoing instances of this workflow
 concurrency:
-  group: release
+  group: reusable-release
   cancel-in-progress: true
 
 jobs:
@@ -71,8 +71,6 @@ jobs:
       # Setup the repo, download all tags, download Python, and install the requests library
       - name: "Checkout Repo"
         uses: actions/checkout@v6
-        with:
-          persist-credentials: false
 
       - name: "Setup Python"
         uses: actions/setup-python@v6
@@ -89,7 +87,7 @@ jobs:
         id: version
         env:
           VERSION: ${{ inputs.version }}
-        run: python ./buildtools/update_version.py -V='$VERSION'
+        run: python ./buildtools/update_version.py -V='${{ env.VERSION }}'
         # Will output "changelog_file", for the exact location of the changelog
 
       - name: "Get changelog"
@@ -118,7 +116,7 @@ jobs:
         env:
           VERSION: ${{ inputs.version }}
           API: ${{ secrets.CFAPIKEY }}
-        run: python ./buildtools/build.py -CSDZ -V='$VERSION' --key='$API'
+        run: python ./buildtools/build.py -CSDZ -V='${{ env.VERSION }}' --key='${{ env.API }}'
         # Will output "client_name" and "server_name", for the name of the client and server zips
 
       # Commit changes after the build process

@@ -7,8 +7,9 @@ name: Test Pull Request
 on:
   pull_request:
     paths:
-      # we only care to make a new nightly release if it impacts the game.
-      - ".github/workflows/nightly.yml"
+      # we only build the PR if it impacts the output
+      - "buildtools/**"
+      - "changelog/LATEST.md"
       - "overrides/**"
       - "serverfiles/**"
       - "manifest.json"
