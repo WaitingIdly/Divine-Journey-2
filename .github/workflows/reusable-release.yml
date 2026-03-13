@@ -75,7 +75,7 @@ jobs:
           persist-credentials: false
 
       - name: "Setup Python"
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.9"
 
@@ -124,7 +124,7 @@ jobs:
       # Commit changes after the build process
       - name: "Commit and push version changes"
         if: ${{ inputs.update-version }}
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "Update ${{ inputs.version }}"
           commit_options: "--no-verify"
@@ -148,7 +148,7 @@ jobs:
 
       # Upload build artifacts to Curseforge
       - name: "Upload Client to Curseforge"
-        uses: itsmeow/curseforge-upload@v3.1.0
+        uses: itsmeow/curseforge-upload@v3.1.2
         id: client
         with:
           release_type: "${{ inputs.release-type }}"
