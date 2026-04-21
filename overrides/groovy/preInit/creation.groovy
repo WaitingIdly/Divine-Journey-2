@@ -4,6 +4,7 @@ import net.minecraftforge.event.RegistryEvent
 import crazypants.enderio.api.farm.IFertilizer
 import crazypants.enderio.base.farming.fertilizer.Bonemeal
 import crazypants.enderio.base.farming.farmers.CustomSeedFarmer
+import classes.content.totemic.TotemEffectSnake
 
 // generic events aren't split properly, so we need to check that manually
 event_manager.listen { RegistryEvent.Register event ->
@@ -28,6 +29,9 @@ event_manager.listen { RegistryEvent.Register event ->
             registry.register(elementalFarmer('roots_infernal_bulb', block('roots:infernal_bulb_crop'), item('roots:infernal_bulb')))
             registry.register(elementalFarmer('roots_dewgonia', block('roots:dewgonia_crop'), item('roots:dewgonia')))
             registry.register(elementalFarmer('roots_stalicripe', block('roots:stalicripe_crop'), item('roots:stalicripe')))
+            break
+        case resource('totemic:b_totem_effects'):
+            registry.register(TotemEffectSnake.INSTANCE)
             break
         default:
             log.debug "${event.getGenericType()} is resource('${event.getName()}')"
